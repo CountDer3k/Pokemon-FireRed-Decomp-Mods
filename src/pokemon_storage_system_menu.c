@@ -31,16 +31,16 @@ static const u16 sChooseBoxMenu_Pal[];
 static const u8 sChooseBoxMenuCenter_Gfx[];
 static const u8 sChooseBoxMenuCorners_Gfx[];
 
-struct {
+struct
+{
     const u8 *text;
     const u8 *desc;
 } static const sMainMenuTexts[OPTIONS_COUNT] = {
-    [OPTION_WITHDRAW]   = {gText_WithdrawPokemon, gText_WithdrawMonDescription},
-    [OPTION_DEPOSIT]    = {gText_DepositPokemon,  gText_DepositMonDescription},
-    [OPTION_MOVE_MONS]  = {gText_MovePokemon,     gText_MoveMonDescription},
-    [OPTION_MOVE_ITEMS] = {gText_MoveItems,       gText_MoveItemsDescription},
-    [OPTION_EXIT]       = {gText_SeeYa,           gText_SeeYaDescription}
-};
+    [OPTION_WITHDRAW] = {gText_WithdrawPokemon, gText_WithdrawMonDescription},
+    [OPTION_DEPOSIT] = {gText_DepositPokemon, gText_DepositMonDescription},
+    [OPTION_MOVE_MONS] = {gText_MovePokemon, gText_MoveMonDescription},
+    [OPTION_MOVE_ITEMS] = {gText_MoveItems, gText_MoveItemsDescription},
+    [OPTION_EXIT] = {gText_SeeYa, gText_SeeYaDescription}};
 
 void DrawTextWindowAndBufferTiles(const u8 *string, void *dst, u8 zero1, u8 zero2, u8 *unused, s32 bytesToBuffer)
 {
@@ -144,8 +144,7 @@ u8 CountPartyNonEggMons(void)
 
     for (i = 0, count = 0; i < PARTY_SIZE; i++)
     {
-        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE
-                && !GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
             count++;
     }
 
@@ -158,10 +157,7 @@ u8 CountPartyAliveNonEggMonsExcept(u8 slotToIgnore)
 
     for (i = 0, count = 0; i < PARTY_SIZE; i++)
     {
-        if (i != slotToIgnore
-                && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE
-                && !GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG)
-                && GetMonData(&gPlayerParty[i], MON_DATA_HP) != 0)
+        if (i != slotToIgnore && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && GetMonData(&gPlayerParty[i], MON_DATA_HP) != 0)
             count++;
     }
 
@@ -224,7 +220,8 @@ static void UnusedWriteRectDma(u16 *dest, u16 dest_left, u16 dest_top, u16 width
         Dma3FillLarge16_(0, dest, width);
 }
 
-enum {
+enum
+{
     STATE_LOAD,
     STATE_FADE_IN,
     STATE_HANDLE_INPUT,
@@ -232,11 +229,11 @@ enum {
     STATE_ENTER_PC,
 };
 
-#define tState          data[0]
+#define tState data[0]
 #define tSelectedOption data[1]
-#define tInput          data[2]
-#define tNextOption     data[3]
-#define tWindowId       data[15]
+#define tInput data[2]
+#define tNextOption data[3]
+#define tWindowId data[15]
 
 static void Task_PCMainMenu(u8 taskId)
 {
@@ -262,7 +259,7 @@ static void Task_PCMainMenu(u8 taskId)
         break;
     case STATE_HANDLE_INPUT:
         task->tInput = Menu_ProcessInput();
-        switch(task->tInput)
+        switch (task->tInput)
         {
         case MENU_NOTHING_CHOSEN:
             task->tNextOption = task->tSelectedOption;
@@ -359,6 +356,8 @@ void ShowPokemonStorageSystemPC(void)
     LockPlayerFieldControls();
 }
 
+/// @brief Called after leaving the PC terminal, return the options to the player on what to do next with the PC.
+/// @param
 static void FieldTask_ReturnToPcMenu(void)
 {
     u8 taskId;
@@ -369,7 +368,15 @@ static void FieldTask_ReturnToPcMenu(void)
     gTasks[taskId].tState = STATE_LOAD;
     gTasks[taskId].tSelectedOption = sPreviousBoxOption;
     Task_PCMainMenu(taskId);
-    SetVBlankCallback(vblankCb);
+
+    if (FlagGet(FLAG_MENUPOKEMONPC) == FALSE)
+    {
+        SetVBlankCallback(vblankCb);
+    }
+    else
+    {
+        SetVBlankCallback(CB2_ReturnToField); // CB@_ReturnToField return to the player without any menus.
+    }
     FadeInFromBlack();
 }
 
@@ -380,8 +387,7 @@ static const struct WindowTemplate sWindowTemplate_MainMenu = {
     .width = 17,
     .height = 10,
     .paletteNum = 15,
-    .baseBlock = 0x001
-};
+    .baseBlock = 0x001};
 
 static void CreatePCMainMenu(u8 whichMenu, s16 *windowIdPtr)
 {
@@ -423,13 +429,11 @@ void ResetPokemonStorageSystem(void)
 void LoadChooseBoxMenuGfx(struct ChooseBoxMenu *menu, u16 tileTag, u16 palTag, u8 subpriority, bool32 loadPal)
 {
     struct SpritePalette palette = {
-        sChooseBoxMenu_Pal, palTag
-    };
+        sChooseBoxMenu_Pal, palTag};
     struct SpriteSheet sheets[] = {
         {sChooseBoxMenuCenter_Gfx, 0x800, tileTag},
-        {sChooseBoxMenuCorners_Gfx,  0x180, tileTag + 1},
-        {}
-    };
+        {sChooseBoxMenuCorners_Gfx, 0x180, tileTag + 1},
+        {}};
 
     if (loadPal) // Always false
         LoadSpritePalette(&palette);
@@ -486,24 +490,20 @@ u8 HandleBoxChooseSelectionInput(void)
 }
 
 static const union AnimCmd sAnim_ChooseBoxMenu_TopLeft[] = {
-    ANIMCMD_FRAME( 0, 5),
-    ANIMCMD_END
-};
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_END};
 
 static const union AnimCmd sAnim_ChooseBoxMenu_BottomLeft[] = {
-    ANIMCMD_FRAME( 4, 5),
-    ANIMCMD_END
-};
+    ANIMCMD_FRAME(4, 5),
+    ANIMCMD_END};
 
 static const union AnimCmd sAnim_ChooseBoxMenu_TopRight[] = {
-    ANIMCMD_FRAME( 6, 5),
-    ANIMCMD_END
-};
+    ANIMCMD_FRAME(6, 5),
+    ANIMCMD_END};
 
 static const union AnimCmd sAnim_ChooseBoxMenu_BottomRight[] = {
     ANIMCMD_FRAME(10, 5),
-    ANIMCMD_END
-};
+    ANIMCMD_END};
 
 static const union AnimCmd *const sAnims_ChooseBoxMenu[] = {
     sAnim_ChooseBoxMenu_TopLeft,
@@ -514,13 +514,11 @@ static const union AnimCmd *const sAnims_ChooseBoxMenu[] = {
 
 static const union AffineAnimCmd sAffineAnim_ChooseBoxMenu[] = {
     AFFINEANIMCMD_FRAME(224, 224, 0, 0),
-    AFFINEANIMCMD_END
-};
+    AFFINEANIMCMD_END};
 
 // Unused
 static const union AffineAnimCmd *const sAffineAnims_ChooseBoxMenu[] = {
-    sAffineAnim_ChooseBoxMenu
-};
+    sAffineAnim_ChooseBoxMenu};
 
 static void ChooseBoxMenu_CreateSprites(u8 curBox)
 {
@@ -531,53 +529,52 @@ static void ChooseBoxMenu_CreateSprites(u8 curBox)
     oamData.size = SPRITE_SIZE(64x64);
     oamData.paletteNum = 1;
     template = (struct SpriteTemplate){
-        0, 0, &oamData, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, SpriteCallbackDummy
-    };
+        0, 0, &oamData, gDummySpriteAnimTable, NULL, gDummySpriteAffineAnimTable, SpriteCallbackDummy};
     {
-    const u8 sText_OutOf30[] = _("/30");
+        const u8 sText_OutOf30[] = _("/30");
 
-    sChooseBoxMenu->curBox = curBox;
-    template.tileTag = sChooseBoxMenu->tileTag;
-    template.paletteTag = sChooseBoxMenu->paletteTag;
+        sChooseBoxMenu->curBox = curBox;
+        template.tileTag = sChooseBoxMenu->tileTag;
+        template.paletteTag = sChooseBoxMenu->paletteTag;
 
-    spriteId = CreateSprite(&template, 160, 96, 0);
-    sChooseBoxMenu->menuSprite = gSprites + spriteId;
+        spriteId = CreateSprite(&template, 160, 96, 0);
+        sChooseBoxMenu->menuSprite = gSprites + spriteId;
 
-    oamData.shape = SPRITE_SHAPE(8x32);
-    oamData.size = SPRITE_SIZE(8x32);
-    template.tileTag = sChooseBoxMenu->tileTag + 1;
-    template.anims = sAnims_ChooseBoxMenu;
-    for (i = 0; i < ARRAY_COUNT(sChooseBoxMenu->menuCornerSprites); i++)
-    {
-        // corner sprites are created in order of top left, bottom left, top right, bottom right
-        u16 animNum;
-        spriteId = CreateSprite(&template, 124, 80, sChooseBoxMenu->subpriority); // place at top left
-        sChooseBoxMenu->menuCornerSprites[i] = &gSprites[spriteId];
-        animNum = 0;
-        if (i & 2)
+        oamData.shape = SPRITE_SHAPE(8x32);
+        oamData.size = SPRITE_SIZE(8x32);
+        template.tileTag = sChooseBoxMenu->tileTag + 1;
+        template.anims = sAnims_ChooseBoxMenu;
+        for (i = 0; i < ARRAY_COUNT(sChooseBoxMenu->menuCornerSprites); i++)
         {
-            sChooseBoxMenu->menuCornerSprites[i]->x = 196; // move to bottom
-            animNum = 2;
+            // corner sprites are created in order of top left, bottom left, top right, bottom right
+            u16 animNum;
+            spriteId = CreateSprite(&template, 124, 80, sChooseBoxMenu->subpriority); // place at top left
+            sChooseBoxMenu->menuCornerSprites[i] = &gSprites[spriteId];
+            animNum = 0;
+            if (i & 2)
+            {
+                sChooseBoxMenu->menuCornerSprites[i]->x = 196; // move to bottom
+                animNum = 2;
+            }
+            if (i & 1)
+            {
+                sChooseBoxMenu->menuCornerSprites[i]->y = 112; // move to right
+                sChooseBoxMenu->menuCornerSprites[i]->oam.size = SPRITE_SIZE(8x16);
+                animNum++;
+            }
+            StartSpriteAnim(sChooseBoxMenu->menuCornerSprites[i], animNum);
         }
-        if (i & 1)
+        for (i = 0; i < ARRAY_COUNT(sChooseBoxMenu->arrowSprites); i++)
         {
-            sChooseBoxMenu->menuCornerSprites[i]->y = 112; // move to right
-            sChooseBoxMenu->menuCornerSprites[i]->oam.size = SPRITE_SIZE(8x16);
-            animNum++;
+            sChooseBoxMenu->arrowSprites[i] = CreateChooseBoxArrows(72 * i + 124, 88, i, 0, sChooseBoxMenu->subpriority);
+            if (sChooseBoxMenu->arrowSprites[i])
+            {
+                sChooseBoxMenu->arrowSprites[i]->data[0] = (i == 0 ? -1 : 1);
+                sChooseBoxMenu->arrowSprites[i]->callback = SpriteCB_ChooseBoxArrow;
+            }
         }
-        StartSpriteAnim(sChooseBoxMenu->menuCornerSprites[i], animNum);
-    }
-    for (i = 0; i < ARRAY_COUNT(sChooseBoxMenu->arrowSprites); i++)
-    {
-        sChooseBoxMenu->arrowSprites[i] = CreateChooseBoxArrows(72 * i + 124, 88, i, 0, sChooseBoxMenu->subpriority);
-        if (sChooseBoxMenu->arrowSprites[i])
-        {
-            sChooseBoxMenu->arrowSprites[i]->data[0] = (i == 0 ? -1 : 1);
-            sChooseBoxMenu->arrowSprites[i]->callback = SpriteCB_ChooseBoxArrow;
-        }
-    }
-    ChooseBoxMenu_PrintBoxNameAndCount();
-    ChooseBoxMenu_PrintTextToSprite(sText_OutOf30, 5, 3);
+        ChooseBoxMenu_PrintBoxNameAndCount();
+        ChooseBoxMenu_PrintTextToSprite(sText_OutOf30, 5, 3);
     }
 }
 

@@ -44,12 +44,18 @@ const u8 gText_Select[] = _("セレクトボタン");
 const u8 gText_ControlPad[] = _("じゅうじボタン");
 const u8 gText_LButtonRButton[] = _("Lボタン Rボタン");
 const u8 gText_Controls[] = _("CONTROLS");
-ALIGNED(4) const u8 gText_PickOk[] = _("{DPAD_UPDOWN}えらぶ {A_BUTTON}けってい");
-ALIGNED(4) const u8 gText_ABUTTONNext[] = _("{A_BUTTON}NEXT");
-ALIGNED(4) const u8 gText_ABUTTONNext_BBUTTONBack[] = _("{A_BUTTON}NEXT {B_BUTTON}BACK");
-ALIGNED(4) const u8 gText_UPDOWNPick_ABUTTONNext_BBUTTONBack[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}NEXT {B_BUTTON}CANCEL");
-ALIGNED(4) const u8 gText_UPDOWNPick_ABUTTONBBUTTONCancel[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}{B_BUTTON}CANCEL");
-ALIGNED(4) const u8 gText_ABUTTONExit[] = _("{A_BUTTON}EXIT");
+ALIGNED(4)
+const u8 gText_PickOk[] = _("{DPAD_UPDOWN}えらぶ {A_BUTTON}けってい");
+ALIGNED(4)
+const u8 gText_ABUTTONNext[] = _("{A_BUTTON}NEXT");
+ALIGNED(4)
+const u8 gText_ABUTTONNext_BBUTTONBack[] = _("{A_BUTTON}NEXT {B_BUTTON}BACK");
+ALIGNED(4)
+const u8 gText_UPDOWNPick_ABUTTONNext_BBUTTONBack[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}NEXT {B_BUTTON}CANCEL");
+ALIGNED(4)
+const u8 gText_UPDOWNPick_ABUTTONBBUTTONCancel[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}{B_BUTTON}CANCEL");
+ALIGNED(4)
+const u8 gText_ABUTTONExit[] = _("{A_BUTTON}EXIT");
 const u8 gText_Boy[] = _("BOY");
 const u8 gText_Girl[] = _("GIRL");
 const u8 gText_PokedexTableOfContents[] = _("POKéDEX   TABLE OF CONTENTS");
@@ -100,16 +106,24 @@ const u8 gText_Size[] = _("SIZE");
 const u8 gText_AreaUnknown[] = _("AREA UNKNOWN");
 const u8 gText_PokedexNo[] = _("{NO}");
 const u8 gText_Page[] = _("PAGE");
-ALIGNED(4) const u8 gText_WelcomeToHOF[] = _("Welcome to the HALL OF FAME!");
-ALIGNED(4) const u8 gText_HOFDexRating[] = _("みつけた ポケモン {STR_VAR_1}!\nつかまえた ポケモン {STR_VAR_2}!\pオダマキはかせの\nポケモンずかん ひょうか!\pオダマキ“どれどれ\p");
-ALIGNED(4) const u8 gText_HOFDexSaving[] = _("ここまでの レポ-トを かきしるしています!\nでんげんを きらないでください");
-ALIGNED(4) const u8 gText_HOFCorrupted[] = _("The HALL OF FAME data is\ncorrupted.");
+ALIGNED(4)
+const u8 gText_WelcomeToHOF[] = _("Welcome to the HALL OF FAME!");
+ALIGNED(4)
+const u8 gText_HOFDexRating[] = _("みつけた ポケモン {STR_VAR_1}!\nつかまえた ポケモン {STR_VAR_2}!\pオダマキはかせの\nポケモンずかん ひょうか!\pオダマキ“どれどれ\p");
+ALIGNED(4)
+const u8 gText_HOFDexSaving[] = _("ここまでの レポ-トを かきしるしています!\nでんげんを きらないでください");
+ALIGNED(4)
+const u8 gText_HOFCorrupted[] = _("The HALL OF FAME data is\ncorrupted.");
 const u8 gText_HOFNumber[] = _("HALL OF FAME No. {STR_VAR_1}");
 const u8 gText_LeagueChamp[] = _("LEAGUE CHAMPION!\nCONGRATULATIONS!");
-ALIGNED(4) const u8 gText_Number[] = _("No. ");
-ALIGNED(4) const u8 gText_Level[] = _("Lv. ");
-ALIGNED(4) const u8 gText_Name[] = _("NAME");
-ALIGNED(4) const u8 gText_IDNumber[] = _("IDNo.");
+ALIGNED(4)
+const u8 gText_Number[] = _("No. ");
+ALIGNED(4)
+const u8 gText_Level[] = _("Lv. ");
+ALIGNED(4)
+const u8 gText_Name[] = _("NAME");
+ALIGNED(4)
+const u8 gText_IDNumber[] = _("IDNo.");
 const u8 gText_BirchInTrouble[] = _("{HIGHLIGHT DYNAMIC_COLOR6}{COLOR WHITE}オダマキはかせが ピンチだ!\nポケモンを だして たすけてあげよう!");
 const u8 gText_ConfirmStarterChoice[] = _("{HIGHLIGHT DYNAMIC_COLOR6}{COLOR WHITE}このポケモンにしますか?");
 const u8 gText_Pokemon4[] = _("ポケモン");
@@ -157,6 +171,7 @@ const u8 gText_YesNo[] = _("YES\nNO");
 const u8 gText_GoBackToThePreviousMenu[] = _("Go back to the\nprevious menu.");
 const u8 gText_WhatWouldYouLikeToDo[] = _("What would you like to do?");
 const u8 gText_MenuPokedex[] = _("POKéDEX");
+const u8 gText_MenuPC[] = _("PC");
 const u8 gText_MenuBag[] = _("BAG");
 const u8 gText_MenuPokenav[] = _("ポケナビ");
 const u8 gText_MenuPlayer[] = _("{PLAYER}");
@@ -299,13 +314,20 @@ const u8 gText_PkmnBaseVar2StatIncreased[] = _("{STR_VAR_1}'s base {STR_VAR_2}\n
 const u8 gText_PkmnSnappedOutOfConfusion[] = _("{STR_VAR_1} snapped out of its\nconfusion.{PAUSE_UNTIL_PRESS}");
 const u8 gText_PkmnGotOverInfatuation[] = _("{STR_VAR_1} got over its\ninfatuation.{PAUSE_UNTIL_PRESS}");
 const u8 gText_OnlyPkmnForBattle[] = _("That's your only\nPOKéMON for battle.");
-ALIGNED(4) const u8 gText_PkmnCantBeTradedNow[] = _("That POKéMON can't be traded\nnow.");
-ALIGNED(4) const u8 gText_EggCantBeTradedNow[] = _("An EGG can't be traded now.");
-ALIGNED(4) const u8 gText_OtherTrainersPkmnCantBeTraded[] = _("The other TRAINER's POKéMON\ncan't be traded now.");
-ALIGNED(4) const u8 gText_OtherTrainerCantAcceptPkmn[] = _("The other TRAINER can't accept\nthat POKéMON now.");
-ALIGNED(4) const u8 gText_CantTradeWithTrainer[] = _("You can't trade with that\nTRAINER now.");
-ALIGNED(4) const u8 gText_NotPkmnOtherTrainerWants[] = _("That isn't the type of POKéMON\nthat the other TRAINER wants.");
-ALIGNED(4) const u8 gText_ThatIsntAnEgg[] = _("That isn't an EGG.");
+ALIGNED(4)
+const u8 gText_PkmnCantBeTradedNow[] = _("That POKéMON can't be traded\nnow.");
+ALIGNED(4)
+const u8 gText_EggCantBeTradedNow[] = _("An EGG can't be traded now.");
+ALIGNED(4)
+const u8 gText_OtherTrainersPkmnCantBeTraded[] = _("The other TRAINER's POKéMON\ncan't be traded now.");
+ALIGNED(4)
+const u8 gText_OtherTrainerCantAcceptPkmn[] = _("The other TRAINER can't accept\nthat POKéMON now.");
+ALIGNED(4)
+const u8 gText_CantTradeWithTrainer[] = _("You can't trade with that\nTRAINER now.");
+ALIGNED(4)
+const u8 gText_NotPkmnOtherTrainerWants[] = _("That isn't the type of POKéMON\nthat the other TRAINER wants.");
+ALIGNED(4)
+const u8 gText_ThatIsntAnEgg[] = _("That isn't an EGG.");
 const u8 gText_ChoosePokemon[] = _("Choose a POKéMON.");
 const u8 gText_MoveToWhere[] = _("Move to where?");
 const u8 gText_TeachWhichPokemon[] = _("Teach which POKéMON?");
@@ -899,6 +921,7 @@ const u8 gText_SavingDontTurnOffThePower2[] = _("SAVING…\nDON'T TURN OFF THE P
 const u8 gStartMenuDesc_Pokedex[] = _("A device that records POKéMON secrets\nupon meeting or catching them.");
 const u8 gStartMenuDesc_Pokemon[] = _("Check and organize POKéMON that are\ntraveling with you in your party.");
 const u8 gStartMenuDesc_Bag[] = _("Equipped with pockets for storing items\nyou bought, received, or found.");
+const u8 gStartMenuDesc_PC[] = _("Access the PC.");
 const u8 gStartMenuDesc_Player[] = _("Check your money and other game data.");
 const u8 gStartMenuDesc_Save[] = _("Save your game with a complete record\nof your progress to take a break.");
 const u8 gStartMenuDesc_Option[] = _("Adjust various game settings such as text\nspeed, game rules, etc.");
@@ -1023,129 +1046,243 @@ const u8 gText_WantToPlayAgain[] = _("Want to play again?");
 const u8 gText_SomeoneDroppedOut[] = _("Somebody dropped out.\nThe link will be canceled.");
 const u8 gText_SpacePoints[] = _(" points");
 const u8 gText_CommunicationStandby3[] = _("Communication standby…");
-ALIGNED(4) const u8 gText_BerryCrush_AreYouReady[] = _("Are you ready to BERRY-CRUSH?\nPlease pick a BERRY for use.\p");
-ALIGNED(4) const u8 gText_BerryCrush_WaitForOthersToChooseBerry[] = _("Please wait while each member\nchooses a BERRY.");
-ALIGNED(4) const u8 gText_BerryCrush_GainedXUnitsOfPowder[] = _("{PAUSE_MUSIC}{PLAY_BGM MUS_LEVEL_UP}You ended up with {STR_VAR_1} units of\nsilky-smooth BERRY POWDER.{RESUME_MUSIC}\pYour total amount of BERRY POWDER\nis {STR_VAR_2}.\p");
-ALIGNED(4) const u8 gText_BerryCrush_RecordingGameResults[] = _("Recording your game results in the\nsave file.\nPlease wait.");
-ALIGNED(4) const u8 gText_BerryCrush_WantToPlayAgain[] = _("Want to play BERRY CRUSH again?");
-ALIGNED(4) const u8 gText_BerryCrush_NoBerries[] = _("You have no BERRIES.\nThe game will be canceled.");
-ALIGNED(4) const u8 gText_BerryCrush_MemberDroppedOut[] = _("A member dropped out.\nThe game will be canceled.");
-ALIGNED(4) const u8 gText_BerryCrush_TimeUp[] = _("Time's up.\pGood BERRY POWDER could not be\nmade…\p");
-ALIGNED(4) const u8 gText_BerryCrush_CommunicationStandby[] = _("Communication standby…");
-ALIGNED(4) const u8 gText_1_ClrBluShdwLtBlu_Dynamic0[] = _("1. {COLOR BLUE}{SHADOW LIGHT_BLUE}{DYNAMIC 0x00}");
+ALIGNED(4)
+const u8 gText_BerryCrush_AreYouReady[] = _("Are you ready to BERRY-CRUSH?\nPlease pick a BERRY for use.\p");
+ALIGNED(4)
+const u8 gText_BerryCrush_WaitForOthersToChooseBerry[] = _("Please wait while each member\nchooses a BERRY.");
+ALIGNED(4)
+const u8 gText_BerryCrush_GainedXUnitsOfPowder[] = _("{PAUSE_MUSIC}{PLAY_BGM MUS_LEVEL_UP}You ended up with {STR_VAR_1} units of\nsilky-smooth BERRY POWDER.{RESUME_MUSIC}\pYour total amount of BERRY POWDER\nis {STR_VAR_2}.\p");
+ALIGNED(4)
+const u8 gText_BerryCrush_RecordingGameResults[] = _("Recording your game results in the\nsave file.\nPlease wait.");
+ALIGNED(4)
+const u8 gText_BerryCrush_WantToPlayAgain[] = _("Want to play BERRY CRUSH again?");
+ALIGNED(4)
+const u8 gText_BerryCrush_NoBerries[] = _("You have no BERRIES.\nThe game will be canceled.");
+ALIGNED(4)
+const u8 gText_BerryCrush_MemberDroppedOut[] = _("A member dropped out.\nThe game will be canceled.");
+ALIGNED(4)
+const u8 gText_BerryCrush_TimeUp[] = _("Time's up.\pGood BERRY POWDER could not be\nmade…\p");
+ALIGNED(4)
+const u8 gText_BerryCrush_CommunicationStandby[] = _("Communication standby…");
+ALIGNED(4)
+const u8 gText_1_ClrBluShdwLtBlu_Dynamic0[] = _("1. {COLOR BLUE}{SHADOW LIGHT_BLUE}{DYNAMIC 0x00}");
 const u8 gText_1_Dynamic0[] = _("1. {DYNAMIC 0x00}");
-ALIGNED(4) const u8 gText_SpaceTimes2[] = _(" times");
-ALIGNED(4) const u8 gText_XDotY[] = _("{STR_VAR_1}.{STR_VAR_2}");
-ALIGNED(4) const u8 gText_StrVar1Berry[] = _("{STR_VAR_1} BERRY");
-ALIGNED(4) const u8 gText_TimeColon[] = _("Time:");
-ALIGNED(4) const u8 gText_PressingSpeed[] = _("Pressing Speed:");
+ALIGNED(4)
+const u8 gText_SpaceTimes2[] = _(" times");
+ALIGNED(4)
+const u8 gText_XDotY[] = _("{STR_VAR_1}.{STR_VAR_2}");
+ALIGNED(4)
+const u8 gText_StrVar1Berry[] = _("{STR_VAR_1} BERRY");
+ALIGNED(4)
+const u8 gText_TimeColon[] = _("Time:");
+ALIGNED(4)
+const u8 gText_PressingSpeed[] = _("Pressing Speed:");
 const u8 gText_Silkiness[] = _("Silkiness:");
-ALIGNED(4) const u8 gText_StrVar1[] = _("{STR_VAR_1}");
-ALIGNED(4) const u8 gText_SpaceMin[] = _("min.");
-ALIGNED(4) const u8 gText_XDotY2[] = _("{STR_VAR_1}.{STR_VAR_2}");
-ALIGNED(4) const u8 gText_SpaceSec[] = _("sec.");
-ALIGNED(4) const u8 gText_XDotY3[] = _("{STR_VAR_1}.{STR_VAR_2}");
-ALIGNED(4) const u8 gText_TimesPerSec[] = _("Times/sec.");
-ALIGNED(4) const u8 gText_Var1Percent[] = _("{STR_VAR_1}%");
-ALIGNED(4) const u8 gText_PressesRankings[] = _("No. of Presses Rankings");
-ALIGNED(4) const u8 gText_CrushingResults[] = _("Crushing Results");
-ALIGNED(4) const u8 gText_NeatnessRankings[] = _("Neatness Rankings");
-ALIGNED(4) const u8 gText_CooperativeRankings[] = _("Cooperative Rankings");
-ALIGNED(4) const u8 gText_PressingPowerRankings[] = _("Pressing-Power Rankings");
+ALIGNED(4)
+const u8 gText_StrVar1[] = _("{STR_VAR_1}");
+ALIGNED(4)
+const u8 gText_SpaceMin[] = _("min.");
+ALIGNED(4)
+const u8 gText_XDotY2[] = _("{STR_VAR_1}.{STR_VAR_2}");
+ALIGNED(4)
+const u8 gText_SpaceSec[] = _("sec.");
+ALIGNED(4)
+const u8 gText_XDotY3[] = _("{STR_VAR_1}.{STR_VAR_2}");
+ALIGNED(4)
+const u8 gText_TimesPerSec[] = _("Times/sec.");
+ALIGNED(4)
+const u8 gText_Var1Percent[] = _("{STR_VAR_1}%");
+ALIGNED(4)
+const u8 gText_PressesRankings[] = _("No. of Presses Rankings");
+ALIGNED(4)
+const u8 gText_CrushingResults[] = _("Crushing Results");
+ALIGNED(4)
+const u8 gText_NeatnessRankings[] = _("Neatness Rankings");
+ALIGNED(4)
+const u8 gText_CooperativeRankings[] = _("Cooperative Rankings");
+ALIGNED(4)
+const u8 gText_PressingPowerRankings[] = _("Pressing-Power Rankings");
 const u8 gText_BerryCrush2[] = _("BERRY CRUSH");
 const u8 gText_PressingSpeedRankings[] = _("Pressing-Speed Rankings");
 const u8 gText_Var1Players[] = _("{STR_VAR_1} PLAYERS");
-ALIGNED(4) const u8 gText_Ghost[] = _("GHOST");
+ALIGNED(4)
+const u8 gText_Ghost[] = _("GHOST");
 const u8 gText_PokemonOnHook[] = _("A POKéMON's on the hook!{PAUSE_UNTIL_PRESS}");
 const u8 gText_NotEvenANibble[] = _("Not even a nibble‥{PAUSE_UNTIL_PRESS}");
 const u8 gText_ItGotAway[] = _("It got away‥{PAUSE_UNTIL_PRESS}");
 const u8 gText_Rooftop2[] = _("ROOFTOP");
-ALIGNED(4) const u8 gString_PokemonFireRed_Staff[] = _("Pokémon FireRed Version\nStaff");
-ALIGNED(4) const u8 gString_PokemonLeafGreen_Staff[] = _("Pokémon LeafGreen Version\nStaff");
-ALIGNED(4) const u8 gCreditsString_Director[] = _("\n\nDirector\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Junichi_Masuda[] = _("\n\n\nJunichi Masuda\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Art_Director_Battle_Director[] = _("\nArt Director\n\nBattle Director\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Ken_Sugimori_Shigeki_Morimoto[] = _("\n\nKen Sugimori\n\nShigeki Morimoto\n\n");
-ALIGNED(4) const u8 gCreditsString_Program_Leader_Planning_Leader_Graphic_Design_Leader[] = _("Program Leader\n\nPlanning Leader\n\nGraphic Design Leader\n\n");
-ALIGNED(4) const u8 gCreditsString_Tetsuya_Watanabe_Koji_Nishino_Takao_Unno[] = _("\nTetsuya Watanabe\n\nKoji Nishino\n\nTakao Unno\n");
-ALIGNED(4) const u8 gCreditsString_Programmers[] = _("Programmers\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Hiroyuki_Nakamura_Masao_Taya_Satoshi_Nohara_Miyuki_Iwasawa_Daisuke_Goto[] = _("\nHiroyuki Nakamura\nMasao Taya\nSatoshi Nohara\nMiyuki Iwasawa\nDaisuke Goto\n");
-ALIGNED(4) const u8 gCreditsString_System_Programmers[] = _("System Programmers\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Tetsuya_Watanabe_Akito_Mori_Hisashi_Sogabe_Sousuke_Tamada[] = _("\nTetsuya Watanabe\nAkito Mori\nHisashi Sogabe\nSousuke Tamada\n\n");
-ALIGNED(4) const u8 gCreditsString_Graphic_Designers[] = _("Graphic Designers\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Takao_Unno_Asuka_Iwashita_Kanako_Eo_Hiroki_Fuchino[] = _("\nTakao Unno\nAsuka Iwashita\nKanako Eo\nHiroki Fuchino\n\n");
-ALIGNED(4) const u8 gCreditsString_Graphic_Designers_2[] = _("\nGraphic Designers\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Ken_Sugimori_Hironobu_Yoshida[] = _("\n\nKen Sugimori\nHironobu Yoshida\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Music_Composition[] = _("\nMusic Composition\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Go_Ichinose_Junichi_Masuda[] = _("\n\nGo Ichinose\nJunichi Masuda\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Sound_Effects[] = _("\n\nSound Effects\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Go_Ichinose[] = _("\n\n\nGo Ichinose\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Game_Designers[] = _("\nGame Designers\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Junichi_Masuda_Koji_Nishino_Tetsuji_Ohta[] = _("\n\nJunichi Masuda\nKoji Nishino\nTetsuji Ohta\n\n");
-ALIGNED(4) const u8 gCreditsString_Game_Designers_2[] = _("\nGame Designers\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Hitomi_Sato_Shigeru_Ohmori_Tadashi_Takahashi[] = _("\n\nHitomi Sato\nShigeru Ohmori\nTadashi Takahashi\n\n");
-ALIGNED(4) const u8 gCreditsString_Game_Scenario[] = _("\nGame Scenario\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Hitomi_Sato_Satoshi_Tajiri[] = _("\n\nHitomi Sato\nSatoshi Tajiri\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Script_Designer_Map_Designer[] = _("\nScript Designer\n\nMap Designer\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Satoshi_Nohara_Shigeru_Ohmori[] = _("\n\nSatoshi Nohara\n\nShigeru Ohmori\n\n");
-ALIGNED(4) const u8 gCreditsString_Parametric_Designers[] = _("\nParametric Designers\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Koji_Nishino_Tetsuji_Ohta_Shigeki_Morimoto[] = _("\n\nKoji Nishino\nTetsuji Ohta\nShigeki Morimoto\n\n");
-ALIGNED(4) const u8 gCreditsString_POKeDEX_Text[] = _("\n\nPOKéDEX Text\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Kenji_Matsushima[] = _("\n\n\nKenji Matsushima\n\n\n");
-ALIGNED(4) const u8 gCreditsString_POKeMON_Designers[] = _("POKéMON Designers\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Ken_Sugimori_Motofumi_Fujiwara_Shigeki_Morimoto_Hironobu_Yoshida[] = _("\nKen Sugimori\nMotofumi Fujiwara\nShigeki Morimoto\nHironobu Yoshida\n\n");
-ALIGNED(4) const u8 gCreditsString_POKeMON_Designers_2[] = _("POKéMON Designers\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Satoshi_Ohta_Asuka_Iwashita_Takao_Unno_Kanako_Eo_Aimi_Tomita[] = _("\nSatoshi Ohta\nAsuka Iwashita\nTakao Unno\nKanako Eo\nAimi Tomita\n");
-ALIGNED(4) const u8 gCreditsString_POKeMON_Designers_3[] = _("POKéMON Designers\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Atsuko_Nishida_Muneo_Saito_Rena_Yoshikawa_Jun_Okutani[] = _("\nAtsuko Nishida\nMuneo Saito\nRena Yoshikawa\nJun Okutani\n\n");
-ALIGNED(4) const u8 gCreditsString_Supporting_Programmers[] = _("Supporting Programmers\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Teruyuki_Yoshioka_Takao_Nakano_Satoshi_Mitsuhara_Daisuke_Hoshino[] = _("\nTeruyuki Yoshioka\nTakao Nakano\n\nSatoshi Mitsuhara\nDaisuke Hoshino\n");
-ALIGNED(4) const u8 gCreditsString_NCL_Product_Testing[] = _("\n\nNCL Product Testing\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_NCL_Super_Mario_Club[] = _("\n\n\nNCL Super Mario Club\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Special_Thanks[] = _("Special Thanks\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Hiro_Nakamura_Hiroyuki_Uesugi_Teruki_Murakawa_Kazuya_Suyama[] = _("\nHiro Nakamura\nHiroyuki Uesugi\nTeruki Murakawa\n\nKazuya Suyama\n");
-ALIGNED(4) const u8 gCreditsString_Special_Thanks_2[] = _("Special Thanks\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Kenji_Tominaga_Kenjiro_Ito_Tomotaka_Komura_Michiko_Takizawa[] = _("\nKenji Tominaga\n\nKenjiro Ito\nTomotaka Komura\nMichiko Takizawa\n");
-ALIGNED(4) const u8 gCreditsString_Special_Thanks_3[] = _("Special Thanks\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Makiko_Takada_Mikiko_Ohashi_Shusaku_Egami_Takanao_Kondo_Rui_Kawaguchi[] = _("\nMakiko Takada\nMikiko Ohashi\nShusaku Egami\nTakanao Kondo\nRui Kawaguchi\n");
-ALIGNED(4) const u8 gCreditsString_Braille_Code_Check[] = _("\n\nBraille Code Check\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Japan_Braille_Library[] = _("\n\n\nJapan Braille Library\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Information_Supervisors[] = _("Information Supervisors\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Hiroki_Enomoto_Kazuyuki_Terada_Yuri_Sakurai_Yumi_Funasaka_Naoko_Yanase[] = _("\nHiroki Enomoto\nKazuyuki Terada\nYuri Sakurai\nYumi Funasaka\nNaoko Yanase\n");
-ALIGNED(4) const u8 gCreditsString_Coordinators[] = _("Coordinators\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Azusa_Tajima_Akira_Kinashi_Kazuki_Yoshihara_Retsuji_Nomoto[] = _("\nAzusa Tajima\nAkira Kinashi\nKazuki Yoshihara\n\nRetsuji Nomoto\n");
-ALIGNED(4) const u8 gCreditsString_Task_Managers[] = _("\nTask Managers\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Hitoshi_Yamagami_Gakuji_Nomoto[] = _("\n\nHitoshi Yamagami\nGakuji Nomoto\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Producers[] = _("\nProducers\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Hiroyuki_Jinnai_Takehiro_Izushi_Hiroaki_Tsuru[] = _("\n\nHiroyuki Jinnai\nTakehiro Izushi\nHiroaki Tsuru\n\n");
-ALIGNED(4) const u8 gCreditsString_Executive_Director[] = _("\n\nExecutive Director\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Satoshi_Tajiri[] = _("\n\n\nSatoshi Tajiri\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Executive_Producer[] = _("\n\nExecutive Producer\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Satoru_Iwata[] = _("\n\n\nSatoru Iwata\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Executive_Producer_2[] = _("\n\nExecutive Producer\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Tsunekaz_Ishihara[] = _("\n\n\nTsunekaz Ishihara\n\n\n");
-ALIGNED(4) const u8 gCreditsString_English_Version_Coordinators[] = _("\nEnglish Version Coordinators\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Hiro_Nakamura_Seth_McMahill[] = _("\n\nHiro Nakamura\nSeth McMahill\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Translator_Text_Editor[] = _("\nTranslator\n\nText Editor\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Nob_Ogasawara_Teresa_Lillygren[] = _("\n\nNob Ogasawara\n\nTeresa Lillygren\n\n");
-ALIGNED(4) const u8 gCreditsString_Programmers_2[] = _("Programmers\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Teruki_Murakawa_Souichi_Yamamoto_Yuichiro_Ito_Akira_Kinashi[] = _("\nTeruki Murakawa\nSouichi Yamamoto\nYuichiro Ito\nAkira Kinashi\n\n");
-ALIGNED(4) const u8 gCreditsString_Environment_Tool_Programmers[] = _("\nEnvironment & Tool Programmers\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Teruki_Murakawa_Souichi_Yamamoto_Kimiko_Nakamichi[] = _("\n\nTeruki Murakawa\nSouichi Yamamoto\nKimiko Nakamichi\n\n");
-ALIGNED(4) const u8 gCreditsString_NOA_Product_Testing[] = _("NOA Product Testing\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Thomas_Hertzog_Kathy_Huguenard_Mika_Kurosawa[] = _("\nThomas Hertzog\nKathy Huguenard\nMika Kurosawa\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Braille_Code_Check_2[] = _("Braille Code Check\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_National_Federation_of_the_Blind_Patricia_A_Maurer_Japan_Braille_Library_European_Blind_Union[] = _("\nNational Federation\n{CLEAR_TO 0x13}of the Blind\nPatricia A. Maurer\nJapan Braille Library\nEuropean Blind Union\n");
-ALIGNED(4) const u8 gCreditsString_Braille_Code_Check_3[] = _("\nBraille Code Check\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_National_Information_Library_Service_Margaret_Campion[] = _("\n\nNational Information Library\n{CLEAR_TO 0x2D}Service\nMargaret Campion\n\n");
-ALIGNED(4) const u8 gCreditsString_Special_Thanks_4[] = _("Special Thanks\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Takehiro_Izushi_Motoyasu_Tojima_Hitoshi_Yamagami_Hiroyuki_Uesugi[] = _("\nTakehiro Izushi\nMotoyasu Tojima\nHitoshi Yamagami\nHiroyuki Uesugi\n\n");
-ALIGNED(4) const u8 gCreditsString_Special_Thanks_5[] = _("Special Thanks\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Nicola_Pratt_Barlow_Shellie_Dow_Anthony_Howitt_Naoko_Saeki_Kyoko_Onishi[] = _("\nNicola Pratt-Barlow\nShellie Dow\nAnthony Howitt\nNaoko Saeki\nKyoko Onishi\n");
-ALIGNED(4) const u8 gCreditsString_Braille_Code_Check_4[] = _("\nBraille Code Check\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_The_Royal_New_Zealand_Foundation_of_the_Blind_Greg_Moran[] = _("\n\nThe Royal New Zealand\nFoundation of the Blind\nGreg Moran\n\n");
-ALIGNED(4) const u8 gCreditsString_Graphic_Designer[] = _("\n\nGraphic Designer\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_Akira_Kinashi[] = _("\n\n\nAkira Kinashi\n\n\n");
+ALIGNED(4)
+const u8 gString_PokemonFireRed_Staff[] = _("Pokémon FireRed Version\nStaff");
+ALIGNED(4)
+const u8 gString_PokemonLeafGreen_Staff[] = _("Pokémon LeafGreen Version\nStaff");
+ALIGNED(4)
+const u8 gCreditsString_Director[] = _("\n\nDirector\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Junichi_Masuda[] = _("\n\n\nJunichi Masuda\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Art_Director_Battle_Director[] = _("\nArt Director\n\nBattle Director\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Ken_Sugimori_Shigeki_Morimoto[] = _("\n\nKen Sugimori\n\nShigeki Morimoto\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Program_Leader_Planning_Leader_Graphic_Design_Leader[] = _("Program Leader\n\nPlanning Leader\n\nGraphic Design Leader\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Tetsuya_Watanabe_Koji_Nishino_Takao_Unno[] = _("\nTetsuya Watanabe\n\nKoji Nishino\n\nTakao Unno\n");
+ALIGNED(4)
+const u8 gCreditsString_Programmers[] = _("Programmers\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Hiroyuki_Nakamura_Masao_Taya_Satoshi_Nohara_Miyuki_Iwasawa_Daisuke_Goto[] = _("\nHiroyuki Nakamura\nMasao Taya\nSatoshi Nohara\nMiyuki Iwasawa\nDaisuke Goto\n");
+ALIGNED(4)
+const u8 gCreditsString_System_Programmers[] = _("System Programmers\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Tetsuya_Watanabe_Akito_Mori_Hisashi_Sogabe_Sousuke_Tamada[] = _("\nTetsuya Watanabe\nAkito Mori\nHisashi Sogabe\nSousuke Tamada\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Graphic_Designers[] = _("Graphic Designers\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Takao_Unno_Asuka_Iwashita_Kanako_Eo_Hiroki_Fuchino[] = _("\nTakao Unno\nAsuka Iwashita\nKanako Eo\nHiroki Fuchino\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Graphic_Designers_2[] = _("\nGraphic Designers\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Ken_Sugimori_Hironobu_Yoshida[] = _("\n\nKen Sugimori\nHironobu Yoshida\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Music_Composition[] = _("\nMusic Composition\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Go_Ichinose_Junichi_Masuda[] = _("\n\nGo Ichinose\nJunichi Masuda\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Sound_Effects[] = _("\n\nSound Effects\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Go_Ichinose[] = _("\n\n\nGo Ichinose\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Game_Designers[] = _("\nGame Designers\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Junichi_Masuda_Koji_Nishino_Tetsuji_Ohta[] = _("\n\nJunichi Masuda\nKoji Nishino\nTetsuji Ohta\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Game_Designers_2[] = _("\nGame Designers\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Hitomi_Sato_Shigeru_Ohmori_Tadashi_Takahashi[] = _("\n\nHitomi Sato\nShigeru Ohmori\nTadashi Takahashi\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Game_Scenario[] = _("\nGame Scenario\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Hitomi_Sato_Satoshi_Tajiri[] = _("\n\nHitomi Sato\nSatoshi Tajiri\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Script_Designer_Map_Designer[] = _("\nScript Designer\n\nMap Designer\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Satoshi_Nohara_Shigeru_Ohmori[] = _("\n\nSatoshi Nohara\n\nShigeru Ohmori\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Parametric_Designers[] = _("\nParametric Designers\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Koji_Nishino_Tetsuji_Ohta_Shigeki_Morimoto[] = _("\n\nKoji Nishino\nTetsuji Ohta\nShigeki Morimoto\n\n");
+ALIGNED(4)
+const u8 gCreditsString_POKeDEX_Text[] = _("\n\nPOKéDEX Text\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Kenji_Matsushima[] = _("\n\n\nKenji Matsushima\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_POKeMON_Designers[] = _("POKéMON Designers\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Ken_Sugimori_Motofumi_Fujiwara_Shigeki_Morimoto_Hironobu_Yoshida[] = _("\nKen Sugimori\nMotofumi Fujiwara\nShigeki Morimoto\nHironobu Yoshida\n\n");
+ALIGNED(4)
+const u8 gCreditsString_POKeMON_Designers_2[] = _("POKéMON Designers\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Satoshi_Ohta_Asuka_Iwashita_Takao_Unno_Kanako_Eo_Aimi_Tomita[] = _("\nSatoshi Ohta\nAsuka Iwashita\nTakao Unno\nKanako Eo\nAimi Tomita\n");
+ALIGNED(4)
+const u8 gCreditsString_POKeMON_Designers_3[] = _("POKéMON Designers\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Atsuko_Nishida_Muneo_Saito_Rena_Yoshikawa_Jun_Okutani[] = _("\nAtsuko Nishida\nMuneo Saito\nRena Yoshikawa\nJun Okutani\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Supporting_Programmers[] = _("Supporting Programmers\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Teruyuki_Yoshioka_Takao_Nakano_Satoshi_Mitsuhara_Daisuke_Hoshino[] = _("\nTeruyuki Yoshioka\nTakao Nakano\n\nSatoshi Mitsuhara\nDaisuke Hoshino\n");
+ALIGNED(4)
+const u8 gCreditsString_NCL_Product_Testing[] = _("\n\nNCL Product Testing\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_NCL_Super_Mario_Club[] = _("\n\n\nNCL Super Mario Club\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Special_Thanks[] = _("Special Thanks\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Hiro_Nakamura_Hiroyuki_Uesugi_Teruki_Murakawa_Kazuya_Suyama[] = _("\nHiro Nakamura\nHiroyuki Uesugi\nTeruki Murakawa\n\nKazuya Suyama\n");
+ALIGNED(4)
+const u8 gCreditsString_Special_Thanks_2[] = _("Special Thanks\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Kenji_Tominaga_Kenjiro_Ito_Tomotaka_Komura_Michiko_Takizawa[] = _("\nKenji Tominaga\n\nKenjiro Ito\nTomotaka Komura\nMichiko Takizawa\n");
+ALIGNED(4)
+const u8 gCreditsString_Special_Thanks_3[] = _("Special Thanks\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Makiko_Takada_Mikiko_Ohashi_Shusaku_Egami_Takanao_Kondo_Rui_Kawaguchi[] = _("\nMakiko Takada\nMikiko Ohashi\nShusaku Egami\nTakanao Kondo\nRui Kawaguchi\n");
+ALIGNED(4)
+const u8 gCreditsString_Braille_Code_Check[] = _("\n\nBraille Code Check\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Japan_Braille_Library[] = _("\n\n\nJapan Braille Library\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Information_Supervisors[] = _("Information Supervisors\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Hiroki_Enomoto_Kazuyuki_Terada_Yuri_Sakurai_Yumi_Funasaka_Naoko_Yanase[] = _("\nHiroki Enomoto\nKazuyuki Terada\nYuri Sakurai\nYumi Funasaka\nNaoko Yanase\n");
+ALIGNED(4)
+const u8 gCreditsString_Coordinators[] = _("Coordinators\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Azusa_Tajima_Akira_Kinashi_Kazuki_Yoshihara_Retsuji_Nomoto[] = _("\nAzusa Tajima\nAkira Kinashi\nKazuki Yoshihara\n\nRetsuji Nomoto\n");
+ALIGNED(4)
+const u8 gCreditsString_Task_Managers[] = _("\nTask Managers\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Hitoshi_Yamagami_Gakuji_Nomoto[] = _("\n\nHitoshi Yamagami\nGakuji Nomoto\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Producers[] = _("\nProducers\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Hiroyuki_Jinnai_Takehiro_Izushi_Hiroaki_Tsuru[] = _("\n\nHiroyuki Jinnai\nTakehiro Izushi\nHiroaki Tsuru\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Executive_Director[] = _("\n\nExecutive Director\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Satoshi_Tajiri[] = _("\n\n\nSatoshi Tajiri\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Executive_Producer[] = _("\n\nExecutive Producer\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Satoru_Iwata[] = _("\n\n\nSatoru Iwata\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Executive_Producer_2[] = _("\n\nExecutive Producer\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Tsunekaz_Ishihara[] = _("\n\n\nTsunekaz Ishihara\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_English_Version_Coordinators[] = _("\nEnglish Version Coordinators\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Hiro_Nakamura_Seth_McMahill[] = _("\n\nHiro Nakamura\nSeth McMahill\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Translator_Text_Editor[] = _("\nTranslator\n\nText Editor\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Nob_Ogasawara_Teresa_Lillygren[] = _("\n\nNob Ogasawara\n\nTeresa Lillygren\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Programmers_2[] = _("Programmers\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Teruki_Murakawa_Souichi_Yamamoto_Yuichiro_Ito_Akira_Kinashi[] = _("\nTeruki Murakawa\nSouichi Yamamoto\nYuichiro Ito\nAkira Kinashi\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Environment_Tool_Programmers[] = _("\nEnvironment & Tool Programmers\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Teruki_Murakawa_Souichi_Yamamoto_Kimiko_Nakamichi[] = _("\n\nTeruki Murakawa\nSouichi Yamamoto\nKimiko Nakamichi\n\n");
+ALIGNED(4)
+const u8 gCreditsString_NOA_Product_Testing[] = _("NOA Product Testing\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Thomas_Hertzog_Kathy_Huguenard_Mika_Kurosawa[] = _("\nThomas Hertzog\nKathy Huguenard\nMika Kurosawa\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Braille_Code_Check_2[] = _("Braille Code Check\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_National_Federation_of_the_Blind_Patricia_A_Maurer_Japan_Braille_Library_European_Blind_Union[] = _("\nNational Federation\n{CLEAR_TO 0x13}of the Blind\nPatricia A. Maurer\nJapan Braille Library\nEuropean Blind Union\n");
+ALIGNED(4)
+const u8 gCreditsString_Braille_Code_Check_3[] = _("\nBraille Code Check\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_National_Information_Library_Service_Margaret_Campion[] = _("\n\nNational Information Library\n{CLEAR_TO 0x2D}Service\nMargaret Campion\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Special_Thanks_4[] = _("Special Thanks\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Takehiro_Izushi_Motoyasu_Tojima_Hitoshi_Yamagami_Hiroyuki_Uesugi[] = _("\nTakehiro Izushi\nMotoyasu Tojima\nHitoshi Yamagami\nHiroyuki Uesugi\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Special_Thanks_5[] = _("Special Thanks\n\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Nicola_Pratt_Barlow_Shellie_Dow_Anthony_Howitt_Naoko_Saeki_Kyoko_Onishi[] = _("\nNicola Pratt-Barlow\nShellie Dow\nAnthony Howitt\nNaoko Saeki\nKyoko Onishi\n");
+ALIGNED(4)
+const u8 gCreditsString_Braille_Code_Check_4[] = _("\nBraille Code Check\n\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_The_Royal_New_Zealand_Foundation_of_the_Blind_Greg_Moran[] = _("\n\nThe Royal New Zealand\nFoundation of the Blind\nGreg Moran\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Graphic_Designer[] = _("\n\nGraphic Designer\n\n\n\n");
+ALIGNED(4)
+const u8 gCreditsString_Akira_Kinashi[] = _("\n\n\nAkira Kinashi\n\n\n");
 const u8 gJPText_MysteryGift[] = _("");
 const u8 gJPText_DecideStop[] = _("");
 const u8 gJPText_ReceiveMysteryGiftWithEReader[] = _("");

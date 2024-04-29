@@ -139,35 +139,28 @@ static const u32 sPikachuIntro_PikachuEars_Gfx[] = INCBIN_U32("graphics/oak_spee
 static const u32 sPikachuIntro_PikachuEyes_Gfx[] = INCBIN_U32("graphics/oak_speech/pikachu_intro/eyes.4bpp.lz");
 
 static const struct BgTemplate sBgTemplates[] =
-{
     {
-        .bg = 0,
-        .charBaseIndex = 2,
-        .mapBaseIndex = 31,
-        .screenSize = 0,
-        .paletteMode = 0,
-        .priority = 0,
-        .baseTile = 0
-    },
-    {
-        .bg = 1,
-        .charBaseIndex = 0,
-        .mapBaseIndex = 30,
-        .screenSize = 0,
-        .paletteMode = 0,
-        .priority = 2,
-        .baseTile = 0
-    },
-    {
-        .bg = 2,
-        .charBaseIndex = 0,
-        .mapBaseIndex = 28,
-        .screenSize = 1,
-        .paletteMode = 1,
-        .priority = 1,
-        .baseTile = 0
-    }
-};
+        {.bg = 0,
+         .charBaseIndex = 2,
+         .mapBaseIndex = 31,
+         .screenSize = 0,
+         .paletteMode = 0,
+         .priority = 0,
+         .baseTile = 0},
+        {.bg = 1,
+         .charBaseIndex = 0,
+         .mapBaseIndex = 30,
+         .screenSize = 0,
+         .paletteMode = 0,
+         .priority = 2,
+         .baseTile = 0},
+        {.bg = 2,
+         .charBaseIndex = 0,
+         .mapBaseIndex = 28,
+         .screenSize = 1,
+         .paletteMode = 1,
+         .priority = 1,
+         .baseTile = 0}};
 
 enum
 {
@@ -176,19 +169,17 @@ enum
 };
 
 static const struct WindowTemplate sControlsGuide_WindowTemplate_Page1[NUM_CONTROLS_GUIDE_PAGE_1_WINDOWS + 1] =
-{
-    [CONTROLS_GUIDE_PAGE_1_WINDOW] =
     {
-        .bg = 0,
-        .tilemapLeft = 0,
-        .tilemapTop = 7,
-        .width = 30,
-        .height = 4,
-        .paletteNum = 15,
-        .baseBlock = 1
-    },
-    DUMMY_WIN_TEMPLATE
-};
+        [CONTROLS_GUIDE_PAGE_1_WINDOW] =
+            {
+                .bg = 0,
+                .tilemapLeft = 0,
+                .tilemapTop = 7,
+                .width = 30,
+                .height = 4,
+                .paletteNum = 15,
+                .baseBlock = 1},
+        DUMMY_WIN_TEMPLATE};
 
 enum
 {
@@ -199,74 +190,66 @@ enum
 };
 
 static const struct WindowTemplate sControlsGuide_WindowTemplate_Page2[NUM_CONTROLS_GUIDE_PAGES_2_3_WINDOWS + 1] =
-{
-    [CONTROLS_GUIDE_PAGES_2_3_WINDOW_TOP] =
     {
-        .bg = 0,
-        .tilemapLeft = 6,
-        .tilemapTop = 3,
-        .width = 24,
-        .height = 6,
-        .paletteNum = 15,
-        .baseBlock = 1
-    },
-    [CONTROLS_GUIDE_PAGES_2_3_WINDOW_MIDDLE] =
-    {
-        .bg = 0,
-        .tilemapLeft = 6,
-        .tilemapTop = 10,
-        .width = 24,
-        .height = 4,
-        .paletteNum = 15,
-        .baseBlock = 146
-    },
-    [CONTROLS_GUIDE_PAGES_2_3_WINDOW_BOTTOM] =
-    {
-        .bg = 0,
-        .tilemapLeft = 6,
-        .tilemapTop = 15,
-        .width = 24,
-        .height = 4,
-        .paletteNum = 15,
-        .baseBlock = 243
-    },
-    DUMMY_WIN_TEMPLATE
-};
+        [CONTROLS_GUIDE_PAGES_2_3_WINDOW_TOP] =
+            {
+                .bg = 0,
+                .tilemapLeft = 6,
+                .tilemapTop = 3,
+                .width = 24,
+                .height = 6,
+                .paletteNum = 15,
+                .baseBlock = 1},
+        [CONTROLS_GUIDE_PAGES_2_3_WINDOW_MIDDLE] =
+            {
+                .bg = 0,
+                .tilemapLeft = 6,
+                .tilemapTop = 10,
+                .width = 24,
+                .height = 4,
+                .paletteNum = 15,
+                .baseBlock = 146},
+        [CONTROLS_GUIDE_PAGES_2_3_WINDOW_BOTTOM] =
+            {
+                .bg = 0,
+                .tilemapLeft = 6,
+                .tilemapTop = 15,
+                .width = 24,
+                .height = 4,
+                .paletteNum = 15,
+                .baseBlock = 243},
+        DUMMY_WIN_TEMPLATE};
 
 static const struct WindowTemplate sControlsGuide_WindowTemplate_Page3[NUM_CONTROLS_GUIDE_PAGES_2_3_WINDOWS + 1] =
-{
-    [CONTROLS_GUIDE_PAGES_2_3_WINDOW_TOP] =
     {
-        .bg = 0,
-        .tilemapLeft = 6,
-        .tilemapTop = 3,
-        .width = 24,
-        .height = 4,
-        .paletteNum = 15,
-        .baseBlock = 1
-    },
-    [CONTROLS_GUIDE_PAGES_2_3_WINDOW_MIDDLE] =
-    {
-        .bg = 0,
-        .tilemapLeft = 6,
-        .tilemapTop = 8,
-        .width = 24,
-        .height = 4,
-        .paletteNum = 15,
-        .baseBlock = 98
-    },
-    [CONTROLS_GUIDE_PAGES_2_3_WINDOW_BOTTOM] =
-    {
-        .bg = 0,
-        .tilemapLeft = 6,
-        .tilemapTop = 13,
-        .width = 24,
-        .height = 6,
-        .paletteNum = 15,
-        .baseBlock = 195
-    },
-    DUMMY_WIN_TEMPLATE
-};
+        [CONTROLS_GUIDE_PAGES_2_3_WINDOW_TOP] =
+            {
+                .bg = 0,
+                .tilemapLeft = 6,
+                .tilemapTop = 3,
+                .width = 24,
+                .height = 4,
+                .paletteNum = 15,
+                .baseBlock = 1},
+        [CONTROLS_GUIDE_PAGES_2_3_WINDOW_MIDDLE] =
+            {
+                .bg = 0,
+                .tilemapLeft = 6,
+                .tilemapTop = 8,
+                .width = 24,
+                .height = 4,
+                .paletteNum = 15,
+                .baseBlock = 98},
+        [CONTROLS_GUIDE_PAGES_2_3_WINDOW_BOTTOM] =
+            {
+                .bg = 0,
+                .tilemapLeft = 6,
+                .tilemapTop = 13,
+                .width = 24,
+                .height = 6,
+                .paletteNum = 15,
+                .baseBlock = 195},
+        DUMMY_WIN_TEMPLATE};
 
 enum
 {
@@ -277,59 +260,53 @@ enum
 };
 
 static const struct WindowTemplate *const sControlsGuide_WindowTemplates[NUM_CONTROLS_GUIDE_PAGES] =
-{
-    [CONTROLS_GUIDE_PAGE_1] = sControlsGuide_WindowTemplate_Page1,
-    [CONTROLS_GUIDE_PAGE_2] = sControlsGuide_WindowTemplate_Page2,
-    [CONTROLS_GUIDE_PAGE_3] = sControlsGuide_WindowTemplate_Page3
-};
+    {
+        [CONTROLS_GUIDE_PAGE_1] = sControlsGuide_WindowTemplate_Page1,
+        [CONTROLS_GUIDE_PAGE_2] = sControlsGuide_WindowTemplate_Page2,
+        [CONTROLS_GUIDE_PAGE_3] = sControlsGuide_WindowTemplate_Page3};
 
 static const struct WindowTemplate sIntro_WindowTemplates[NUM_INTRO_WINDOWS + 1] =
-{
-    [WIN_INTRO_TEXTBOX] =
     {
-        .bg = 0,
-        .tilemapLeft = 1,
-        .tilemapTop = 4,
-        .width = 28,
-        .height = 15,
-        .paletteNum = 15,
-        .baseBlock = 1
-    },
-    [WIN_INTRO_BOYGIRL] =
-    {
-        .bg = 0,
-        .tilemapLeft = 18,
-        .tilemapTop = 9,
-        .width = 9,
-        .height = 4,
-        .paletteNum = 15,
-        .baseBlock = 372
-    },
-    [WIN_INTRO_YESNO] =
-    {
-        .bg = 0,
-        .tilemapLeft = 2,
-        .tilemapTop = 2,
-        .width = 6,
-        .height = 4,
-        .paletteNum = 15,
-        .baseBlock = 384
-    },
-    [WIN_INTRO_NAMES] =
-    {
-        .bg = 0,
-        .tilemapLeft = 2,
-        .tilemapTop = 2,
-        .width = 12,
-        .height = 10,
-        .paletteNum = 15,
-        .baseBlock = 1
-    },
-    DUMMY_WIN_TEMPLATE
-};
+        [WIN_INTRO_TEXTBOX] =
+            {
+                .bg = 0,
+                .tilemapLeft = 1,
+                .tilemapTop = 4,
+                .width = 28,
+                .height = 15,
+                .paletteNum = 15,
+                .baseBlock = 1},
+        [WIN_INTRO_BOYGIRL] =
+            {
+                .bg = 0,
+                .tilemapLeft = 18,
+                .tilemapTop = 9,
+                .width = 9,
+                .height = 4,
+                .paletteNum = 15,
+                .baseBlock = 372},
+        [WIN_INTRO_YESNO] =
+            {
+                .bg = 0,
+                .tilemapLeft = 2,
+                .tilemapTop = 2,
+                .width = 6,
+                .height = 4,
+                .paletteNum = 15,
+                .baseBlock = 384},
+        [WIN_INTRO_NAMES] =
+            {
+                .bg = 0,
+                .tilemapLeft = 2,
+                .tilemapTop = 1,
+                .width = 12,
+                .height = 12,
+                .paletteNum = 15,
+                .baseBlock = 1},
+        DUMMY_WIN_TEMPLATE};
 
-static const u8 sTextColor_White[] = { 0, 1, 2, 0 };
-static const u8 sTextColor_DarkGray[] = { 0, 2, 3, 0 };
+static const u8 sTextColor_White[] = {0, 1, 2, 0};
+static const u8 sTextColor_DarkGray[] = {0, 2, 3, 0};
 
 enum
 {
@@ -340,19 +317,18 @@ enum
 };
 
 static const u8 *const sPikachuIntro_Strings[NUM_PIKACHU_INTRO_PAGES] =
-{
-    [PIKACHU_INTRO_PAGE_1] = gPikachuIntro_Text_Page1,
-    [PIKACHU_INTRO_PAGE_2] = gPikachuIntro_Text_Page2,
-    [PIKACHU_INTRO_PAGE_3] = gPikachuIntro_Text_Page3
-};
+    {
+        [PIKACHU_INTRO_PAGE_1] = gPikachuIntro_Text_Page1,
+        [PIKACHU_INTRO_PAGE_2] = gPikachuIntro_Text_Page2,
+        [PIKACHU_INTRO_PAGE_3] = gPikachuIntro_Text_Page3};
 
-#define GFX_TAG_PLATFORM     0x1000
-#define GFX_TAG_PIKACHU      0x1001
+#define GFX_TAG_PLATFORM 0x1000
+#define GFX_TAG_PIKACHU 0x1001
 #define GFX_TAG_PIKACHU_EARS 0x1002
 #define GFX_TAG_PIKACHU_EYES 0x1003
 
-#define PAL_TAG_PLATFORM     0x1000
-#define PAL_TAG_PIKACHU      0x1001
+#define PAL_TAG_PLATFORM 0x1000
+#define PAL_TAG_PIKACHU 0x1001
 
 enum
 {
@@ -369,293 +345,265 @@ enum
 };
 
 static const struct CompressedSpriteSheet sPikachuIntro_Pikachu_SpriteSheets[] =
-{
-    [PIKACHU_BODY_PLATFORM_LEFT] =
     {
-        .data = sPikachuIntro_PikachuBody_Gfx,
-        .size = 0x400,
-        .tag = GFX_TAG_PIKACHU
-    },
-    [PIKACHU_EARS_PLATFORM_MIDDLE] =
-    {
-        .data = sPikachuIntro_PikachuEars_Gfx,
-        .size = 0x200,
-        .tag = GFX_TAG_PIKACHU_EARS
-    },
-    [PIKACHU_EYES_PLATFORM_RIGHT] =
-    {
-        .data = sPikachuIntro_PikachuEyes_Gfx,
-        .size = 0x80,
-        .tag = GFX_TAG_PIKACHU_EYES
-    },
+        [PIKACHU_BODY_PLATFORM_LEFT] =
+            {
+                .data = sPikachuIntro_PikachuBody_Gfx,
+                .size = 0x400,
+                .tag = GFX_TAG_PIKACHU},
+        [PIKACHU_EARS_PLATFORM_MIDDLE] =
+            {
+                .data = sPikachuIntro_PikachuEars_Gfx,
+                .size = 0x200,
+                .tag = GFX_TAG_PIKACHU_EARS},
+        [PIKACHU_EYES_PLATFORM_RIGHT] =
+            {
+                .data = sPikachuIntro_PikachuEyes_Gfx,
+                .size = 0x80,
+                .tag = GFX_TAG_PIKACHU_EYES},
 };
 
 static const struct CompressedSpriteSheet sOakSpeech_Platform_SpriteSheet =
-{
-    .data = sOakSpeech_Platform_Gfx,
-    .size = 0x600,
-    .tag = GFX_TAG_PLATFORM
-};
+    {
+        .data = sOakSpeech_Platform_Gfx,
+        .size = 0x600,
+        .tag = GFX_TAG_PLATFORM};
 
 static const struct SpritePalette sPikachuIntro_Pikachu_SpritePalette =
-{
-    .data = sPikachuIntro_Pikachu_Pal,
-    .tag = PAL_TAG_PIKACHU
-};
+    {
+        .data = sPikachuIntro_Pikachu_Pal,
+        .tag = PAL_TAG_PIKACHU};
 
 static const struct SpritePalette sOakSpeech_Platform_SpritePalette =
-{
-    .data = sOakSpeech_Platform_Pal,
-    .tag = PAL_TAG_PLATFORM
-};
+    {
+        .data = sOakSpeech_Platform_Pal,
+        .tag = PAL_TAG_PLATFORM};
 
 static const union AnimCmd sOakSpeech_PlatformLeft_Anim[] =
-{
-    ANIMCMD_FRAME( 0, 0),
-    ANIMCMD_END
-};
+    {
+        ANIMCMD_FRAME(0, 0),
+        ANIMCMD_END};
 
 static const union AnimCmd sOakSpeech_PlatformMiddle_Anim[] =
-{
-    ANIMCMD_FRAME(16, 0),
-    ANIMCMD_END
-};
+    {
+        ANIMCMD_FRAME(16, 0),
+        ANIMCMD_END};
 
 static const union AnimCmd sOakSpeech_PlatformRight_Anim[] =
-{
-    ANIMCMD_FRAME(32, 0),
-    ANIMCMD_END
-};
+    {
+        ANIMCMD_FRAME(32, 0),
+        ANIMCMD_END};
 
 static const union AnimCmd *const sOakSpeech_PlatformLeft_Anims[] =
-{
-    sOakSpeech_PlatformLeft_Anim
-};
+    {
+        sOakSpeech_PlatformLeft_Anim};
 
 static const union AnimCmd *const sOakSpeech_PlatformMiddle_Anims[] =
-{
-    sOakSpeech_PlatformMiddle_Anim
-};
+    {
+        sOakSpeech_PlatformMiddle_Anim};
 
 static const union AnimCmd *const sOakSpeech_PlatformRight_Anims[] =
-{
-    sOakSpeech_PlatformRight_Anim
-};
+    {
+        sOakSpeech_PlatformRight_Anim};
 
 static const struct SpriteTemplate sOakSpeech_Platform_SpriteTemplates[] =
-{
-    [PIKACHU_BODY_PLATFORM_LEFT] =
     {
-        .tileTag = GFX_TAG_PLATFORM,
-        .paletteTag = PAL_TAG_PLATFORM,
-        .oam = &gOamData_AffineOff_ObjBlend_32x32,
-        .anims = sOakSpeech_PlatformLeft_Anims,
-        .images = NULL,
-        .affineAnims = gDummySpriteAffineAnimTable,
-        .callback = SpriteCallbackDummy
-    },
-    [PIKACHU_EARS_PLATFORM_MIDDLE] =
-    {
-        .tileTag = GFX_TAG_PLATFORM,
-        .paletteTag = PAL_TAG_PLATFORM,
-        .oam = &gOamData_AffineOff_ObjBlend_32x32,
-        .anims = sOakSpeech_PlatformMiddle_Anims,
-        .images = NULL,
-        .affineAnims = gDummySpriteAffineAnimTable,
-        .callback = SpriteCallbackDummy
-    },
-    [PIKACHU_EYES_PLATFORM_RIGHT] =
-    {
-        .tileTag = GFX_TAG_PLATFORM,
-        .paletteTag = PAL_TAG_PLATFORM,
-        .oam = &gOamData_AffineOff_ObjBlend_32x32,
-        .anims = sOakSpeech_PlatformRight_Anims,
-        .images = NULL,
-        .affineAnims = gDummySpriteAffineAnimTable,
-        .callback = SpriteCallbackDummy
-    },
+        [PIKACHU_BODY_PLATFORM_LEFT] =
+            {
+                .tileTag = GFX_TAG_PLATFORM,
+                .paletteTag = PAL_TAG_PLATFORM,
+                .oam = &gOamData_AffineOff_ObjBlend_32x32,
+                .anims = sOakSpeech_PlatformLeft_Anims,
+                .images = NULL,
+                .affineAnims = gDummySpriteAffineAnimTable,
+                .callback = SpriteCallbackDummy},
+        [PIKACHU_EARS_PLATFORM_MIDDLE] =
+            {
+                .tileTag = GFX_TAG_PLATFORM,
+                .paletteTag = PAL_TAG_PLATFORM,
+                .oam = &gOamData_AffineOff_ObjBlend_32x32,
+                .anims = sOakSpeech_PlatformMiddle_Anims,
+                .images = NULL,
+                .affineAnims = gDummySpriteAffineAnimTable,
+                .callback = SpriteCallbackDummy},
+        [PIKACHU_EYES_PLATFORM_RIGHT] =
+            {
+                .tileTag = GFX_TAG_PLATFORM,
+                .paletteTag = PAL_TAG_PLATFORM,
+                .oam = &gOamData_AffineOff_ObjBlend_32x32,
+                .anims = sOakSpeech_PlatformRight_Anims,
+                .images = NULL,
+                .affineAnims = gDummySpriteAffineAnimTable,
+                .callback = SpriteCallbackDummy},
 };
 
 static const union AnimCmd sPikachuIntro_PikachuBody_Anim[] =
-{
-    ANIMCMD_FRAME( 0, 30),
-    ANIMCMD_FRAME(16, 30),
-    ANIMCMD_JUMP(0)
-};
+    {
+        ANIMCMD_FRAME(0, 30),
+        ANIMCMD_FRAME(16, 30),
+        ANIMCMD_JUMP(0)};
 
 static const union AnimCmd sPikachuIntro_PikachuEars_Anim[] =
-{
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(8, 12),
-    ANIMCMD_FRAME(0, 12),
-    ANIMCMD_FRAME(8, 12),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(8, 12),
-    ANIMCMD_FRAME(0, 12),
-    ANIMCMD_FRAME(8, 12),
-    ANIMCMD_JUMP(0)
-};
+    {
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(8, 12),
+        ANIMCMD_FRAME(0, 12),
+        ANIMCMD_FRAME(8, 12),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(8, 12),
+        ANIMCMD_FRAME(0, 12),
+        ANIMCMD_FRAME(8, 12),
+        ANIMCMD_JUMP(0)};
 
 static const union AnimCmd sPikachuIntro_PikachuEyes_Anim[] =
-{
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(2,  8),
-    ANIMCMD_FRAME(0,  8),
-    ANIMCMD_FRAME(2,  8),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(0, 60),
-    ANIMCMD_FRAME(2,  8),
-    ANIMCMD_FRAME(0,  8),
-    ANIMCMD_FRAME(2,  8),
-    ANIMCMD_JUMP(0)
-};
+    {
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(2, 8),
+        ANIMCMD_FRAME(0, 8),
+        ANIMCMD_FRAME(2, 8),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(0, 60),
+        ANIMCMD_FRAME(2, 8),
+        ANIMCMD_FRAME(0, 8),
+        ANIMCMD_FRAME(2, 8),
+        ANIMCMD_JUMP(0)};
 
 static const union AnimCmd *const sPikachuIntro_PikachuBody_Anims[] =
-{
-    sPikachuIntro_PikachuBody_Anim
-};
+    {
+        sPikachuIntro_PikachuBody_Anim};
 
 static const union AnimCmd *const sPikachuIntro_PikachuEars_Anims[] =
-{
-    sPikachuIntro_PikachuEars_Anim
-};
+    {
+        sPikachuIntro_PikachuEars_Anim};
 
 static const union AnimCmd *const sPikachuIntro_PikachuEyes_Anims[] =
-{
-    sPikachuIntro_PikachuEyes_Anim
-};
+    {
+        sPikachuIntro_PikachuEyes_Anim};
 
 static const struct SpriteTemplate sPikachuIntro_Pikachu_SpriteTemplates[NUM_PIKACHU_PLATFORM_SPRITES] =
-{
-    [PIKACHU_BODY_PLATFORM_LEFT] =
     {
-        .tileTag = GFX_TAG_PIKACHU,
-        .paletteTag = PAL_TAG_PIKACHU,
-        .oam = &gOamData_AffineOff_ObjNormal_32x32,
-        .anims = sPikachuIntro_PikachuBody_Anims,
-        .images = NULL,
-        .affineAnims = gDummySpriteAffineAnimTable,
-        .callback = SpriteCallbackDummy
-    },
-    [PIKACHU_EARS_PLATFORM_MIDDLE] =
-    {
-        .tileTag = GFX_TAG_PIKACHU_EARS,
-        .paletteTag = PAL_TAG_PIKACHU,
-        .oam = &gOamData_AffineOff_ObjNormal_32x16,
-        .anims = sPikachuIntro_PikachuEars_Anims,
-        .images = NULL,
-        .affineAnims = gDummySpriteAffineAnimTable,
-        .callback = SpriteCallbackDummy
-    },
-    [PIKACHU_EYES_PLATFORM_RIGHT] =
-    {
-        .tileTag = GFX_TAG_PIKACHU_EYES,
-        .paletteTag = PAL_TAG_PIKACHU,
-        .oam = &gOamData_AffineOff_ObjNormal_16x8,
-        .anims = sPikachuIntro_PikachuEyes_Anims,
-        .images = NULL,
-        .affineAnims = gDummySpriteAffineAnimTable,
-        .callback = SpriteCallbackDummy
-    }
-};
+        [PIKACHU_BODY_PLATFORM_LEFT] =
+            {
+                .tileTag = GFX_TAG_PIKACHU,
+                .paletteTag = PAL_TAG_PIKACHU,
+                .oam = &gOamData_AffineOff_ObjNormal_32x32,
+                .anims = sPikachuIntro_PikachuBody_Anims,
+                .images = NULL,
+                .affineAnims = gDummySpriteAffineAnimTable,
+                .callback = SpriteCallbackDummy},
+        [PIKACHU_EARS_PLATFORM_MIDDLE] =
+            {
+                .tileTag = GFX_TAG_PIKACHU_EARS,
+                .paletteTag = PAL_TAG_PIKACHU,
+                .oam = &gOamData_AffineOff_ObjNormal_32x16,
+                .anims = sPikachuIntro_PikachuEars_Anims,
+                .images = NULL,
+                .affineAnims = gDummySpriteAffineAnimTable,
+                .callback = SpriteCallbackDummy},
+        [PIKACHU_EYES_PLATFORM_RIGHT] =
+            {
+                .tileTag = GFX_TAG_PIKACHU_EYES,
+                .paletteTag = PAL_TAG_PIKACHU,
+                .oam = &gOamData_AffineOff_ObjNormal_16x8,
+                .anims = sPikachuIntro_PikachuEyes_Anims,
+                .images = NULL,
+                .affineAnims = gDummySpriteAffineAnimTable,
+                .callback = SpriteCallbackDummy}};
 
 #define CONTROLS_GUIDE_STRINGS_PER_PAGE 3
 
 static const u8 *const sControlsGuide_Pages2And3_Strings[CONTROLS_GUIDE_STRINGS_PER_PAGE * 2] =
-{
-    // Page 2
-    gControlsGuide_Text_DPad,
-    gControlsGuide_Text_AButton,
-    gControlsGuide_Text_BButton,
-    // Page 3
-    gControlsGuide_Text_StartButton,
-    gControlsGuide_Text_SelectButton,
-    gControlsGuide_Text_LRButtons
-};
+    {
+        // Page 2
+        gControlsGuide_Text_DPad,
+        gControlsGuide_Text_AButton,
+        gControlsGuide_Text_BButton,
+        // Page 3
+        gControlsGuide_Text_StartButton,
+        gControlsGuide_Text_SelectButton,
+        gControlsGuide_Text_LRButtons};
 
 static const u8 *const sMaleNameChoices[] =
-{
+    {
 #if defined(FIRERED)
-    gNameChoice_Red,
-    gNameChoice_Fire,
-    gNameChoice_Ash,
-    gNameChoice_Kene,
-    gNameChoice_Geki,
+        gNameChoice_Red,
+        gNameChoice_Fire,
+        gNameChoice_Ash,
+        gNameChoice_Kene,
+        gNameChoice_Geki,
 #elif defined(LEAFGREEN)
-    gNameChoice_Green,
-    gNameChoice_Leaf,
-    gNameChoice_Gary,
-    gNameChoice_Kaz,
-    gNameChoice_Toru,
+        gNameChoice_Green,
+        gNameChoice_Leaf,
+        gNameChoice_Gary,
+        gNameChoice_Kaz,
+        gNameChoice_Toru,
 #endif
-    gNameChoice_Jak,
-    gNameChoice_Janne,
-    gNameChoice_Jonn,
-    gNameChoice_Kamon,
-    gNameChoice_Karl,
-    gNameChoice_Taylor,
-    gNameChoice_Oscar,
-    gNameChoice_Hiro,
-    gNameChoice_Max,
-    gNameChoice_Jon,
-    gNameChoice_Ralph,
-    gNameChoice_Kay,
-    gNameChoice_Tosh,
-    gNameChoice_Roak
-};
+        gNameChoice_Jak,
+        gNameChoice_Janne,
+        gNameChoice_Jonn,
+        gNameChoice_Kamon,
+        gNameChoice_Karl,
+        gNameChoice_Taylor,
+        gNameChoice_Oscar,
+        gNameChoice_Hiro,
+        gNameChoice_Max,
+        gNameChoice_Jon,
+        gNameChoice_Ralph,
+        gNameChoice_Kay,
+        gNameChoice_Tosh,
+        gNameChoice_Roak};
 
 static const u8 *const sFemaleNameChoices[] =
-{
+    {
 #if defined(FIRERED)
-    gNameChoice_Red,
-    gNameChoice_Fire,
+        gNameChoice_Red,
+        gNameChoice_Fire,
 #elif defined(LEAFGREEN)
-    gNameChoice_Green,
-    gNameChoice_Leaf,
+        gNameChoice_Green,
+        gNameChoice_Leaf,
 #endif
-    gNameChoice_Omi,
-    gNameChoice_Jodi,
-    gNameChoice_Amanda,
-    gNameChoice_Hillary,
-    gNameChoice_Makey,
-    gNameChoice_Michi,
-    gNameChoice_Paula,
-    gNameChoice_June,
-    gNameChoice_Cassie,
-    gNameChoice_Rey,
-    gNameChoice_Seda,
-    gNameChoice_Kiko,
-    gNameChoice_Mina,
-    gNameChoice_Norie,
-    gNameChoice_Sai,
-    gNameChoice_Momo,
-    gNameChoice_Suzi
-};
+        gNameChoice_Omi,
+        gNameChoice_Jodi,
+        gNameChoice_Amanda,
+        gNameChoice_Hillary,
+        gNameChoice_Makey,
+        gNameChoice_Michi,
+        gNameChoice_Paula,
+        gNameChoice_June,
+        gNameChoice_Cassie,
+        gNameChoice_Rey,
+        gNameChoice_Seda,
+        gNameChoice_Kiko,
+        gNameChoice_Mina,
+        gNameChoice_Norie,
+        gNameChoice_Sai,
+        gNameChoice_Momo,
+        gNameChoice_Suzi};
 
 static const u8 *const sRivalNameChoices[] =
-{
+    {
 #if defined(FIRERED)
-    gNameChoice_Green,
-    gNameChoice_Gary,
-    gNameChoice_Kaz,
-    gNameChoice_Toru
+        gNameChoice_Green,
+        gNameChoice_Gary,
+        gNameChoice_Kaz,
+        gNameChoice_Toru,
 #elif defined(LEAFGREEN)
-    gNameChoice_Red,
-    gNameChoice_Ash,
-    gNameChoice_Kene,
-    gNameChoice_Geki
+        gNameChoice_Red,
+        gNameChoice_Ash,
+        gNameChoice_Kene,
+        gNameChoice_Geki,
 #endif
 };
 
@@ -686,24 +634,24 @@ static void CB2_NewGameScene(void)
 void StartNewGameScene(void)
 {
     gPlttBufferUnfaded[0] = RGB_BLACK;
-    gPlttBufferFaded[0]   = RGB_BLACK;
+    gPlttBufferFaded[0] = RGB_BLACK;
     CreateTask(Task_NewGameScene, 0);
     SetMainCallback2(CB2_NewGameScene);
 }
 
-#define tSpriteTimer                data[0]
-#define tTrainerPicPosX             data[1]
-#define tTrainerPicFadeState        data[2]
-#define tTimer                      data[3]
-#define tNidoranFSpriteId           data[4]
-#define tTextCursorSpriteId         data[5]
-#define tPokeBallSpriteId           data[6]
+#define tSpriteTimer data[0]
+#define tTrainerPicPosX data[1]
+#define tTrainerPicFadeState data[2]
+#define tTimer data[3]
+#define tNidoranFSpriteId data[4]
+#define tTextCursorSpriteId data[5]
+#define tPokeBallSpriteId data[6]
 #define tPikachuPlatformSpriteId(i) data[7 + i] // Pikachu and the platform are built of three sprites,
-                                 // data[8]     // so these are used to hold their sprite IDs
-                                 // data[9]     //
-#define tMenuWindowId               data[13]
-#define tTextboxWindowId            data[14]
-#define tDelta                      data[15]
+                                                // data[8]     // so these are used to hold their sprite IDs
+                                                // data[9]     //
+#define tMenuWindowId data[13]
+#define tTextboxWindowId data[14]
+#define tDelta data[15]
 
 static void Task_NewGameScene(u8 taskId)
 {
@@ -771,8 +719,8 @@ static void Task_NewGameScene(u8 taskId)
         break;
     case 7:
         CreateTopBarWindowLoadPalette(0, 30, 0, 13, 0x1C4);
-        FillBgTilemapBufferRect_Palette0(1, 0xD00F, 0,  0, 30, 2);
-        FillBgTilemapBufferRect_Palette0(1, 0xD002, 0,  2, 30, 1);
+        FillBgTilemapBufferRect_Palette0(1, 0xD00F, 0, 0, 30, 2);
+        FillBgTilemapBufferRect_Palette0(1, 0xD002, 0, 2, 30, 1);
         FillBgTilemapBufferRect_Palette0(1, 0xD00E, 0, 19, 30, 1);
         ControlsGuide_LoadPage1();
         gPaletteFade.bufferTransferDisabled = FALSE;
@@ -840,7 +788,7 @@ static void Task_ControlsGuide_HandleInput(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
-        if(JOY_NEW((A_BUTTON | B_BUTTON)))
+        if (JOY_NEW((A_BUTTON | B_BUTTON)))
         {
             if (JOY_NEW(A_BUTTON))
             {
@@ -1322,7 +1270,6 @@ static void Task_OakSpeech_HandleGenderInput(u8 taskId)
         return;
     }
     gTasks[taskId].func = Task_OakSpeech_ClearGenderWindows;
-
 }
 
 static void Task_OakSpeech_ClearGenderWindows(u8 taskId)
@@ -1377,6 +1324,8 @@ static void Task_OakSpeech_FadeOutForPlayerNamingScreen(u8 taskId)
     }
 }
 
+/// @brief Displays the options for naming the rival characters
+/// @param taskId ???
 static void Task_OakSpeech_MoveRivalDisplayNameOptions(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -1630,8 +1579,8 @@ static void Task_OakSpeech_SetUpExitAnimation(u8 taskId)
 }
 
 #define tPlayerPicFadeOutTimer data[0]
-#define tScaleDelta            data[2]
-#define tPlayerIsShrunk        data[15]
+#define tScaleDelta data[2]
+#define tPlayerIsShrunk data[15]
 
 static void Task_OakSpeech_SetUpShrinkPlayerPic(u8 taskId)
 {
@@ -1677,7 +1626,7 @@ static void Task_OakSpeech_SetUpDestroyPlatformSprites(u8 taskId)
     s16 *data = gTasks[taskId2].data;
     data[0] = 0; // assigned, but never read
     tBGFadeStarted = 0;
-    data[2] = 0; // assigned, but never read
+    data[2] = 0;  // assigned, but never read
     data[15] = 0; // assigned, but never read
     BeginNormalPaletteFade(PALETTES_OBJECTS | 0x0FCF, 4, 0, 16, RGB_BLACK);
 }
@@ -1711,9 +1660,9 @@ static void Task_OakSpeech_DestroyPlatformSprites(u8 taskId)
 #undef tBGFadeStarted
 
 #define tPlayerPicFadeWhiteTimer data[0]
-#define tUnderflowingTimer       data[1]
-#define tSecondaryTimer          data[2]
-#define tBlendCoefficient        data[14]
+#define tUnderflowingTimer data[1]
+#define tSecondaryTimer data[2]
+#define tBlendCoefficient data[14]
 
 static void Task_OakSpeech_SetUpFadePlayerPicWhite(u8 taskId)
 {
@@ -2008,8 +1957,8 @@ static void ClearTrainerPic(void)
 #define tParentTaskId data[0]
 #define tBlendTarget1 data[1]
 #define tBlendTarget2 data[2]
-#define tUnusedState  data[3]
-#define tFadeTimer    data[4]
+#define tUnusedState data[3]
+#define tFadeTimer data[4]
 
 static void Task_SlowFadeIn(u8 taskId)
 {
@@ -2114,24 +2063,37 @@ static void CreateFadeOutTask(u8 taskId, u8 delay)
         gTasks[taskId2].tPikachuPlatformSpriteId(i) = gTasks[taskId].tPikachuPlatformSpriteId(i);
 }
 
+/// @brief Prints to the screen a set of options for a name
+/// @param taskId
+/// @param hasPlayerBeenNamed Determines if optiosn are for player or rival.
 static void PrintNameChoiceOptions(u8 taskId, u8 hasPlayerBeenNamed)
 {
     s16 *data = gTasks[taskId].data;
     const u8 *const *textPtrs;
     u8 i;
+    u8 textSize = 16;
+    u8 rivalNameCount = ARRAY_COUNT(sRivalNameChoices);
+    u8 rivalNameOptionCount = rivalNameCount + 1;
+    u8 optionArrayCount = ARRAY_COUNT(sRivalNameChoices) + 1;
 
     tMenuWindowId = AddWindow(&sIntro_WindowTemplates[WIN_INTRO_NAMES]);
     PutWindowTilemap(tMenuWindowId);
+
+    // WindowId, ??, ??, Frame Color
     DrawStdFrameWithCustomTileAndPalette(tMenuWindowId, 1, GetStdWindowBaseTileNum(), 14);
+
+    // WindowsId, Pixel Fill color (0 = transparent, >1 different colors)
     FillWindowPixelBuffer(gTasks[taskId].tMenuWindowId, PIXEL_FILL(1));
     AddTextPrinterParameterized(tMenuWindowId, FONT_NORMAL, gOtherText_NewName, 8, 1, 0, NULL);
     if (hasPlayerBeenNamed == FALSE)
         textPtrs = gSaveBlock2Ptr->playerGender == MALE ? sMaleNameChoices : sFemaleNameChoices;
     else
         textPtrs = sRivalNameChoices;
-    for (i = 0; i < ARRAY_COUNT(sRivalNameChoices); i++)
-        AddTextPrinterParameterized(tMenuWindowId, FONT_NORMAL, textPtrs[i], 8, 16 * (i + 1) + 1, 0, NULL);
-    Menu_InitCursor(tMenuWindowId, FONT_NORMAL, 0, 1, 16, 5, 0);
+    for (i = 0; i < rivalNameCount; i++)
+        AddTextPrinterParameterized(tMenuWindowId, FONT_NORMAL, textPtrs[i], 8, textSize * (i + 1) + 1, 0, NULL);
+
+    // WindowID, Font Size, X position of cursor, Y Position of cursor, Distance to move cursor (in pixels), Options to scroll by before restarting from top/bottom, option to start on.
+    Menu_InitCursor(tMenuWindowId, FONT_NORMAL, 0, 1, textSize, rivalNameOptionCount, 0);
     CopyWindowToVram(tMenuWindowId, COPYWIN_FULL);
 }
 

@@ -36,11 +36,13 @@
 #include "help_system.h"
 #include "constants/songs.h"
 #include "constants/field_weather.h"
+#include "pokemon_storage_system.h"
 
 enum StartMenuOption
 {
     STARTMENU_POKEDEX = 0,
     STARTMENU_POKEMON,
+    STARTMENU_PC,
     STARTMENU_BAG,
     STARTMENU_PLAYER,
     STARTMENU_SAVE,
@@ -81,6 +83,7 @@ static bool8 StartMenuPokedexSanityCheck(void);
 static bool8 StartMenuPokedexCallback(void);
 static bool8 StartMenuPokemonCallback(void);
 static bool8 StartMenuBagCallback(void);
+static bool8 StartMenuPCCallback(void);
 static bool8 StartMenuPlayerCallback(void);
 static bool8 StartMenuSaveCallback(void);
 static bool8 StartMenuOptionCallback(void);
@@ -113,16 +116,16 @@ static void CloseSaveStatsWindow(void);
 static void CloseStartMenu(void);
 
 static const struct MenuAction sStartMenuActionTable[] = {
-    { gText_MenuPokedex, {.u8_void = StartMenuPokedexCallback} },
-    { gText_MenuPokemon, {.u8_void = StartMenuPokemonCallback} },
-    { gText_MenuBag, {.u8_void = StartMenuBagCallback} },
-    { gText_MenuPlayer, {.u8_void = StartMenuPlayerCallback} },
-    { gText_MenuSave, {.u8_void = StartMenuSaveCallback} },
-    { gText_MenuOption, {.u8_void = StartMenuOptionCallback} },
-    { gText_MenuExit, {.u8_void = StartMenuExitCallback} },
-    { gText_MenuRetire, {.u8_void = StartMenuSafariZoneRetireCallback} },
-    { gText_MenuPlayer, {.u8_void = StartMenuLinkPlayerCallback} }
-};
+    {gText_MenuPokedex, {.u8_void = StartMenuPokedexCallback}},
+    {gText_MenuPokemon, {.u8_void = StartMenuPokemonCallback}},
+    {gText_MenuPC, {.u8_void = StartMenuPCCallback}},
+    {gText_MenuBag, {.u8_void = StartMenuBagCallback}},
+    {gText_MenuPlayer, {.u8_void = StartMenuPlayerCallback}},
+    {gText_MenuSave, {.u8_void = StartMenuSaveCallback}},
+    {gText_MenuOption, {.u8_void = StartMenuOptionCallback}},
+    {gText_MenuExit, {.u8_void = StartMenuExitCallback}},
+    {gText_MenuRetire, {.u8_void = StartMenuSafariZoneRetireCallback}},
+    {gText_MenuPlayer, {.u8_void = StartMenuLinkPlayerCallback}}};
 
 static const struct WindowTemplate sSafariZoneStatsWindowTemplate = {
     .bg = 0,
@@ -131,44 +134,38 @@ static const struct WindowTemplate sSafariZoneStatsWindowTemplate = {
     .width = 10,
     .height = 4,
     .paletteNum = 15,
-    .baseBlock = 0x008
-};
+    .baseBlock = 0x008};
 
 static const u8 *const sStartMenuDescPointers[] = {
     gStartMenuDesc_Pokedex,
     gStartMenuDesc_Pokemon,
+    gStartMenuDesc_PC,
     gStartMenuDesc_Bag,
     gStartMenuDesc_Player,
     gStartMenuDesc_Save,
     gStartMenuDesc_Option,
     gStartMenuDesc_Exit,
     gStartMenuDesc_Retire,
-    gStartMenuDesc_Player
-};
+    gStartMenuDesc_Player};
 
 static const struct BgTemplate sBGTemplates_AfterLinkSaveMessage[] = {
-    {
-        .bg = 0,
-        .charBaseIndex = 2,
-        .mapBaseIndex = 31,
-        .screenSize = 0,
-        .paletteMode = 0,
-        .priority = 0,
-        .baseTile = 0x000
-    }
-};
+    {.bg = 0,
+     .charBaseIndex = 2,
+     .mapBaseIndex = 31,
+     .screenSize = 0,
+     .paletteMode = 0,
+     .priority = 0,
+     .baseTile = 0x000}};
 
 static const struct WindowTemplate sWindowTemplates_AfterLinkSaveMessage[] = {
-    {
-        .bg = 0,
-        .tilemapLeft = 2,
-        .tilemapTop = 15,
-        .width = 26,
-        .height = 4,
-        .paletteNum = 15,
-        .baseBlock = 0x198
-    }, DUMMY_WIN_TEMPLATE
-};
+    {.bg = 0,
+     .tilemapLeft = 2,
+     .tilemapTop = 15,
+     .width = 26,
+     .height = 4,
+     .paletteNum = 15,
+     .baseBlock = 0x198},
+    DUMMY_WIN_TEMPLATE};
 
 static const struct WindowTemplate sSaveStatsWindowTemplate = {
     .bg = 0,
@@ -177,12 +174,11 @@ static const struct WindowTemplate sSaveStatsWindowTemplate = {
     .width = 14,
     .height = 9,
     .paletteNum = 13,
-    .baseBlock = 0x008
-};
+    .baseBlock = 0x008};
 
-static ALIGNED(2) const u8 sTextColor_StatName[] = { 1, 2, 3 };
-static ALIGNED(2) const u8 sTextColor_StatValue[] = { 1, 4, 5 };
-static ALIGNED(2) const u8 sTextColor_LocationHeader[] = { 1, 6, 7 };
+static ALIGNED(2) const u8 sTextColor_StatName[] = {1, 2, 3};
+static ALIGNED(2) const u8 sTextColor_StatValue[] = {1, 4, 5};
+static ALIGNED(2) const u8 sTextColor_LocationHeader[] = {1, 6, 7};
 
 // Unused
 static void SetHasPokedexAndPokemon(void)
@@ -204,6 +200,8 @@ static void SetUpStartMenu(void)
         SetUpStartMenu_NormalField();
 }
 
+/// @brief Adds a new entry to the Start Menu
+/// @param newEntry
 static void AppendToStartMenuItems(u8 newEntry)
 {
     AppendToList(sStartMenuOrder, &sNumStartMenuItems, newEntry);
@@ -214,7 +212,10 @@ static void SetUpStartMenu_NormalField(void)
     if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
         AppendToStartMenuItems(STARTMENU_POKEDEX);
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
+    {
         AppendToStartMenuItems(STARTMENU_POKEMON);
+        AppendToStartMenuItems(STARTMENU_PC);
+    }
     AppendToStartMenuItems(STARTMENU_BAG);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_SAVE);
@@ -445,9 +446,7 @@ static bool8 StartCB_HandleInput(void)
 
 static void StartMenu_FadeScreenIfLeavingOverworld(void)
 {
-    if (sStartMenuCallback != StartMenuSaveCallback
-     && sStartMenuCallback != StartMenuExitCallback
-     && sStartMenuCallback != StartMenuSafariZoneRetireCallback)
+    if (sStartMenuCallback != StartMenuSaveCallback && sStartMenuCallback != StartMenuExitCallback && sStartMenuCallback != StartMenuSafariZoneRetireCallback)
     {
         StopPokemonLeagueLightingEffectTask();
         FadeScreen(FADE_TO_BLACK, 0);
@@ -501,6 +500,27 @@ static bool8 StartMenuBagCallback(void)
     return FALSE;
 }
 
+/// @brief The callback function to do when the PC option is selected from the start menu.
+/// @param
+/// @return
+static bool8 StartMenuPCCallback(void)
+{
+    u8 taskId;
+
+    if (!gPaletteFade.active)
+    {
+        PlayRainStoppingSoundEffect();
+        DestroySafariZoneStatsWindow();
+        CleanupOverworldWindowsAndTilemaps();
+
+        // Call the open pokemon storage with the option to "Move Pokemon (2)"
+        EnterPokeStorage(2);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 static bool8 StartMenuPlayerCallback(void)
 {
     if (!gPaletteFade.active)
@@ -550,7 +570,6 @@ static bool8 StartMenuSafariZoneRetireCallback(void)
     SafariZoneRetirePrompt();
     return TRUE;
 }
-
 
 static bool8 StartMenuLinkPlayerCallback(void)
 {

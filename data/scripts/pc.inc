@@ -7,6 +7,7 @@ EventScript_PC::
 	setvar VAR_0x8004, 0
 	special AnimatePcTurnOn
 	playse SE_PC_ON
+	setflag FLAG_MENUPOKEMONPC
 	msgbox Text_BootedUpPC
 	goto EventScript_PCMainMenu
 	end
@@ -68,6 +69,7 @@ EventScript_TurnOffPC::
 	playse SE_PC_OFF
 	special AnimatePcTurnOff
 	special SetHelpContextForMap
+	clearflag FLAG_MENUPOKEMONPC
 	releaseall
 	end
 

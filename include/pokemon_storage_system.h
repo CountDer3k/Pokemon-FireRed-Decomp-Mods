@@ -4,11 +4,11 @@
 #include "global.h"
 #include "pokemon.h"
 
-#define TOTAL_BOXES_COUNT       14
-#define IN_BOX_ROWS             5 // Number of rows, 6 Pokémon per row
-#define IN_BOX_COLUMNS          6 // Number of columns, 5 Pokémon per column
-#define IN_BOX_COUNT            (IN_BOX_ROWS * IN_BOX_COLUMNS)
-#define BOX_NAME_LENGTH         8
+#define TOTAL_BOXES_COUNT 14
+#define IN_BOX_ROWS 5    // Number of rows, 6 Pokémon per row
+#define IN_BOX_COLUMNS 6 // Number of columns, 5 Pokémon per column
+#define IN_BOX_COUNT (IN_BOX_ROWS * IN_BOX_COLUMNS)
+#define BOX_NAME_LENGTH 8
 
 /*
             COLUMNS
@@ -59,5 +59,6 @@ void CB2_ReturnToPokeStorage(void);
 void ResetPokemonStorageSystem(void);
 u8 StorageGetCurrentBox(void);
 void DrawTextWindowAndBufferTiles(const u8 *string, void *dst, u8 zero1, u8 zero2, u8 *buffer, s32 bytesToBuffer);
+void EnterPokeStorage(u8);
 
 #endif // GUARD_POKEMON_STORAGE_SYSTEM_H

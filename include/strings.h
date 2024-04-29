@@ -117,10 +117,10 @@ extern const u8 gFameCheckerText_ClearTextbox[];
 extern const u8 gFameCheckerText_MainScreenUI[]; // "{DPAD_ANY}PICK {DPAD_UPDOWN}SELECT {A_BUTTON}OK$"
 extern const u8 gFameCheckerText_PickScreenUI[]; // "{DPAD_ANY}PICK {DPAD_UPDOWN}SELECT {B_BUTTON}CANCEL$"
 extern const u8 gFameCheckerText_FlavorTextUI[]; // "{START_BUTTON}PICK {A_BUTTON}READ {B_BUTTON}CANCEL$"
-extern const u8 gFameCheckerOakName[]; // "OAK$"
-extern const u8 gFameCheckerDaisyName[]; // "DAISY$"
-extern const u8 gFameCheckerBillName[]; // "BILL$"
-extern const u8 gFameCheckerMrFujiName[]; // "FUJI$"
+extern const u8 gFameCheckerOakName[];			 // "OAK$"
+extern const u8 gFameCheckerDaisyName[];		 // "DAISY$"
+extern const u8 gFameCheckerBillName[];			 // "BILL$"
+extern const u8 gFameCheckerMrFujiName[];		 // "FUJI$"
 
 // teachy_tv
 extern const u8 gTeachyTvString_TeachBattle[];
@@ -392,7 +392,7 @@ extern const u8 gText_PkmnCantSwitchOut[];
 
 // credits
 extern const u8 gString_Dummy[];
-extern const u8 gString_PokemonFireRed_Staff[]; // FR
+extern const u8 gString_PokemonFireRed_Staff[];	  // FR
 extern const u8 gString_PokemonLeafGreen_Staff[]; // LG
 extern const u8 gCreditsString_Director[];
 extern const u8 gCreditsString_Junichi_Masuda[];
@@ -624,6 +624,7 @@ extern const u8 gText_MailReturnedToBagMessageErased[];
 
 // start_menu
 extern const u8 gText_MenuPokedex[];
+extern const u8 gText_MenuPC[];
 extern const u8 gText_MenuBag[];
 extern const u8 gText_MenuPlayer[];
 extern const u8 gText_MenuSave[];
@@ -634,6 +635,7 @@ extern const u8 gText_MenuSafariStats[];
 extern const u8 gStartMenuDesc_Pokedex[];
 extern const u8 gStartMenuDesc_Pokemon[];
 extern const u8 gStartMenuDesc_Bag[];
+extern const u8 gStartMenuDesc_PC[];
 extern const u8 gStartMenuDesc_Save[];
 extern const u8 gStartMenuDesc_Option[];
 extern const u8 gStartMenuDesc_Exit[];
@@ -1545,4 +1547,4 @@ extern const u8 gText_PokeSum_EggOrigin_NicePlace[];
 extern const u8 gText_PokeSum_EggOrigin_Spa[];
 extern const u8 gText_PokeSum_EggOrigin_Trade[];
 
-#endif //GUARD_STRINGS_H
+#endif // GUARD_STRINGS_H
